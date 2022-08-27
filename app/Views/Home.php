@@ -77,7 +77,7 @@ WebFont.load({
 							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
 								<li>
 									<div class="dropdown-title d-flex justify-content-between align-items-center">
-										Messages
+										Messages mensajes
 										<a href="#" class="small">Mark all as read</a>
 									</div>
 								</li>
