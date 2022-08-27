@@ -637,7 +637,7 @@ body {
 .sidebar.sidebar-style-2 .nav .nav-item {
   padding: 0 15px; }
   .sidebar.sidebar-style-2 .nav .nav-item a {
-    padding: 8px 10px;
+    padding: 15px 10px;
     border-radius: 5px; }
   .sidebar.sidebar-style-2 .nav .nav-item a:hover, .sidebar.sidebar-style-2 .nav .nav-item a:focus, .sidebar.sidebar-style-2 .nav .nav-item a[data-toggle=collapse][aria-expanded=true] {
     background: rgba(199, 199, 199, 0.2); }
