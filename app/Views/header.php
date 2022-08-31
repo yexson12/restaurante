@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>El Parrillero</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="<?= base_url() ?>/public/atlantis/assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['<?= base_url() ?>/public/atlantis/assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/atlantis.css">
+
+    <!-- Input Spinner -->
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/input-spinner.css">
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/demo.css">
+
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .input-spinner {
+            height: 20px !important;
+            width: 50px !important;
+            font-size: 12px;
+        }
+
+        .lista-item-personas {
+            background: white !important;
+            box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1) !important;
+            border-radius: 10px !important;
+        }
+
+        .empty-person{
+            /* padding: 70px 60px 80px !important; */
+            border: 3px dashed rgba(0, 0, 0, 0.247) !important;
+            background: transparent !important;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="blue">
+
+            <a href="index.html" class="logo">
+                <img src="<?= base_url() ?>/public/atlantis/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="fas fa-concierge-bell"></i>
+                </button>
+            </div>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+
+            <div class="container-fluid">
+                <div class="collapse" id="search-nav">
+                    <form class="navbar-left navbar-form nav-search mr-md-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="btn btn-search pr-1">
+                                    <i class="fa fa-search search-icon"></i>
+                                </button>
+                            </div>
+                            <input type="text" placeholder="Search ..." class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item toggle-nav-search hidden-caret">
+                        <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+                           aria-expanded="false" aria-controls="search-nav">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="nav-link" href="<?= base_url() ?>/dividir">
+                            <i class="fas fa-coins"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fas fa-list-ul"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar sidebar-style-2">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <div class="user">
+                    <!-- <div class="avatar-sm float-left mr-2 d-flex justify-content-center align-items-center">
+                        <i class="fas fa-apple-alt fa-2x text-center text-muted"></i>
+                    </div> -->
+                    <div class="info d-flex justify-content-center align-items-center">
+                        <span class="h2 text-center text-muted m-0"><b>~MENU~</b></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <ul class="nav nav-primary">
+                    <li class="nav-item active">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <p>Parrillas</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <p>Platos</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <p>Bebidas</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <p>Postres</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+        <div class="container">
