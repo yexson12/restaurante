@@ -13934,7 +13934,7 @@ img.mfp-img {
     padding: 10px 15px 0px;
     order: 1; }
   .topbar_open .main-panel {
-    transform: translate3d(0, 62px, 0) !important; }
+    /*transform: translate3d(0, 62px, 0) !important;*/ }
   .topbar_open > .content {
     margin-top: 0px !important; }
 

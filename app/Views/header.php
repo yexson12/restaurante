@@ -171,4 +171,4 @@
     <!-- End Sidebar -->
 
     <div class="main-panel">
-        <div class="container">
+
