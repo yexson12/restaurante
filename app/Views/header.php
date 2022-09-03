@@ -142,7 +142,7 @@
                     </div> -->
                     <div class="info d-flex justify-content-center align-items-center">
                       
-                        <a href="<?= base_url() ?>/dividir"  >
+                        <a href="<?= base_url() ?>/subcategorias"  >
                         <span class="h2 text-center text-muted m-0"><b>~MENU~</b>
                         </span>
                         </a>

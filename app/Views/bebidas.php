@@ -24,10 +24,10 @@
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">TODO</li>
-        <li data-filter=".burger">CERVESAS</li>
+        <li data-filter=".cervesa">CERVESAS</li>
         <li data-filter=".pizza">GASEOSAS</li>
-        <li data-filter=".pasta">LICORES</li>
-        <li data-filter=".fries">REFRESCOS</li>
+        <li data-filter=".licor">LICORES</li>
+        <li data-filter=".refresco">REFRESCOS</li>
       </ul>
 
       <div class="filters-contenr">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Pizza
+                    INKA KOLA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -108,7 +108,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all burger">
+          <div class="col-sm-6 col-lg-4 all cervesa">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Burger
+                   PILSEN
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -192,7 +192,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Pizza
+                  COCA COLA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -260,7 +260,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all pasta">
+          <div class="col-sm-6 col-lg-4 all licor">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -268,7 +268,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Pasta
+                  RON CARTABIO
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -336,7 +336,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all fries">
+          <div class="col-sm-6 col-lg-4 all refresco">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -344,7 +344,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    French Fries
+                   CHICHA MORADA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -420,7 +420,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Pizza
+                 GUARANA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -488,7 +488,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all burger">
+          <div class="col-sm-6 col-lg-4 all cervesa">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -496,7 +496,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Tasty Burger
+                CRSITAL
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -564,7 +564,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all burger">
+          <div class="col-sm-6 col-lg-4 all cervesa">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -572,7 +572,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Tasty Burger
+                  HEINEKEN
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -640,7 +640,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 all pasta">
+          <div class="col-sm-6 col-lg-4 all licor">
             <div class="box">
               <div>
                 <div class="img-box">
@@ -648,7 +648,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Delicious Pasta
+                  ROSE
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
