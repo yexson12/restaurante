@@ -141,7 +141,11 @@
                         <i class="fas fa-apple-alt fa-2x text-center text-muted"></i>
                     </div> -->
                     <div class="info d-flex justify-content-center align-items-center">
-                        <span class="h2 text-center text-muted m-0"><b>~MENU~</b></span>
+                      
+                        <a href="<?= base_url() ?>/dividir"  >
+                        <span class="h2 text-center text-muted m-0"><b>~MENU~</b>
+                        </span>
+                        </a>
                         <div class="clearfix"></div>
                     </div>
                 </div>
