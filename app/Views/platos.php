@@ -24,10 +24,10 @@
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">TODO</li>
-        <li data-filter=".burger">CERVESAS</li>
-        <li data-filter=".pizza">GASEOSAS</li>
-        <li data-filter=".pasta">LICORES</li>
-        <li data-filter=".fries">REFRESCOS</li>
+        <li data-filter=".burger">MENUS</li>
+        <li data-filter=".pizza">SOPAS</li>
+        <li data-filter=".pasta">ENTRADAS</li>
+        <li data-filter=".fries">ENSALADAS</li>
       </ul>
 
       <div class="filters-contenr">
