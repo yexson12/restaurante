@@ -117,7 +117,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link" href="<?= base_url() ?>/dividir">
+                        <a class="nav-link" href="<?= base_url() ?>/dividir"   >
                             <i class="fas fa-coins"></i>
                         </a>
                     </li>
@@ -147,25 +147,25 @@
                 </div>
                 <ul class="nav nav-primary">
                     <li class="nav-item active">
-                        <a href="#">
+                    <a href="<?= base_url() ?>/parrillas"  >
                             <i class="fas fa-home"></i>
                             <p>Parrillas</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                    <a href="<?= base_url() ?>/platos"  >
                             <i class="fas fa-home"></i>
                             <p>Platos</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                        <a href="<?= base_url() ?>/bebidas"  >
                             <i class="fas fa-home"></i>
-                            <p>Bebidas</p>
+                            <p>BEBIDAS</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                    <a href="<?= base_url() ?>/postres"  >
                             <i class="fas fa-home"></i>
                             <p>Postres</p>
                         </a>

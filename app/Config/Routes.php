@@ -37,6 +37,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Menu::index');
 $routes->get('dividir/', 'Dividir::index');
+$routes->get('bebidas/', 'Bebidas::index');
+$routes->get('postres/', 'Postres::index');
+$routes->get('platos/', 'Platos::index');
+$routes->get('parrillas/', 'Parrillas::index');
 
 /*
  * --------------------------------------------------------------------
