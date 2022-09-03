@@ -22,7 +22,14 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/atlantis.css">
-
+<!-- PARTE YEXSON  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+ 
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/responsive.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/style.css">
+<!-- FIN PARTE YEXSON -->
     <!-- Input Spinner -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/input-spinner.css">
 

@@ -285,6 +285,16 @@
 <!-- Input Spinner -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/input-spinner/input-spinner.js"></script>
 
+
+<!-- PARTE YEXSON  -->
+<script src="<?= base_url() ?>/public/atlantis/assets/js/jcategoria.js"></script>
+<!-- ISOTE PERMITE LA NAVEGACION -->
+<script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+<!-- nice select -->
+<!-- FIN PARTE YEXSON  -->
+
+
+
 </body>
 
 </html>

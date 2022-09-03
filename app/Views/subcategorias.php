@@ -74,7 +74,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-        NUEVA CATEGORIA
+        CATEGORIAS
         </h2>
       </div>
 
