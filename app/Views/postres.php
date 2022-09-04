@@ -11,16 +11,23 @@
 </STyle>
 
 <div class="container CONTAINERHOLA">
-    
+<div class="panel-header" style="	background-image: linear-gradient(rgba(231, 197, 197, 0.507),rgba(61, 60, 60, 0.863)), url('<?= base_url() ?>/public/atlantis/assets/img/proyecto/como-prender-una-parrilla-1900Wx500H.jpg');
+                 background-repeat: no-repeat; background-position: 50% 50%;
+                 background-size:cover; ">
+    <div class="page-inner py-5">
+      <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+        <div>
+          <h2 class="text-white pb-2 fw-bold"> POSTRES</h2>
+          <h5 class="text-white op-7 mb-2">Todas las bebidas heladas</h5>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- SECCION MENUS-->
 
  <section class="food_section layout_padding-bottom">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-        POSTRES
-        </h2>
-      </div>
+      
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">TODO</li>

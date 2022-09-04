@@ -1,26 +1,39 @@
 <STyle>
-    .CONTAINERHOLA{border: 2px red solid;
+  .CONTAINERHOLA {
+    border: 2px red solid;
 
-    }
-    .panel-header{border: 2px greenyellow solid;
+  }
 
-}
-.page-inner{border: 2px greenyellow solid;
+  .panel-header {
+    border: 2px greenyellow solid;
 
-}
+  }
+
+  .page-inner {
+    border: 2px greenyellow solid;
+
+  }
 </STyle>
 
 <div class="container CONTAINERHOLA">
-    
-    <!-- SECCION MENUS-->
-
- <section class="food_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-        BEBIDAS
-        </h2>
+  <div class="panel-header" style="	background-image: linear-gradient(rgba(231, 197, 197, 0.507),rgba(61, 60, 60, 0.863)), url('<?= base_url() ?>/public/atlantis/assets/img/proyecto/como-prender-una-parrilla-1900Wx500H.jpg');
+                 background-repeat: no-repeat; background-position: 50% 50%;
+                 background-size:cover; ">
+    <div class="page-inner py-5">
+      <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+        <div>
+          <h2 class="text-white pb-2 fw-bold"> BEBIDAS</h2>
+          <h5 class="text-white op-7 mb-2">Todas las bebidas heladas</h5>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- SECCION MENUS-->
+
+  <section class="food_section layout_padding-bottom">
+    <div class="container">
+
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">TODO</li>
@@ -116,7 +129,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                   PILSEN
+                    PILSEN
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -192,7 +205,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                  COCA COLA
+                    COCA COLA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -268,7 +281,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                  RON CARTABIO
+                    RON CARTABIO
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -344,7 +357,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                   CHICHA MORADA
+                    CHICHA MORADA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -420,7 +433,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                 GUARANA
+                    GUARANA
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -496,7 +509,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                CRSITAL
+                    CRSITAL
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -572,7 +585,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                  HEINEKEN
+                    HEINEKEN
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -648,7 +661,7 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                  ROSE
+                    ROSE
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -724,13 +737,13 @@
         </a>
       </div>
     </div>
-  <!-- prueba-->
+    <!-- prueba-->
 
-     <span id="displayYear"></span>
- <!-- prueba-->
- 
+    <span id="displayYear"></span>
+    <!-- prueba-->
 
-  <!-- end food section -->
+
+    <!-- end food section -->
 
 
 
