@@ -56,7 +56,7 @@
 
                         <div class="form-group">
 
-                            <label for="ID_CATEGORIA">SUBCATEGORIA</label>
+                            <label for="ID_CATEGORIA">CATEGORIA</label>
                             <select type="hidden" required class="form-control" name="ID_CATEGORIA" id="ID_CATEGORIA">
                                 <?php foreach ($categoria as $categorias) : ?>
                                     <option value="<?= $categorias['ID_CATEGORIA']; ?>">
@@ -69,9 +69,6 @@
                             </select>
 
                         </div>
-
-
-
                         <div class="form-group">
 
                             <label for="ID_SUBCAT">SUBCATEGORIA</label>
@@ -88,15 +85,12 @@
 
                         </div>
 
-
-
-
                         <div class="form-group">
                             <label for="foto">imagen</label>
                             <input id="foto" class="form-control-file" type="file" name="foto">
                         </div>
 
-                    
+
 
 
                         <button class="btn btn-success" type="submit">guardar</button>
@@ -108,6 +102,27 @@
 
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#ID_CATEGORIA').val(1);
+            recargarLista();
 
+            $('#ID_CATEGORIA').change(function() {
+                recargarLista();
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        function recargarLista() {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost/restaurante/controller/index",
+                data: "categoria=" + $('#ID_CATEGORIA').val(),
+                success: function(r) {
+                    $('#ID_SUBCAT').html(r);
+                }
+            });
+        }
+    </script>
 
 </div>

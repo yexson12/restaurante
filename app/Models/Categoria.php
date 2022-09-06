@@ -7,6 +7,4 @@ class Categoria extends Model{
     protected $table      = 'categoria';
     protected $primaryKey ='ID_CATEGORIA';
     protected $allowedFields =['NOMBRE_CATEGORIA','DES_CATEGORIA'];
-
-
 }
