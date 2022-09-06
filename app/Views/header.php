@@ -142,7 +142,7 @@
                     </div> -->
                     <div class="info d-flex justify-content-center align-items-center">
                       
-                        <a href="<?= base_url() ?>/dividir"  >
+                        <a href="<?= base_url() ?>/menugeneral"  >
                         <span class="h2 text-center text-muted m-0"><b>~MENU~</b>
                         </span>
                         </a>
@@ -174,6 +174,13 @@
                             <p>Postres</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                    <a href="<?= base_url() ?>/admin_pro"  >
+                            <i class="fas fa-home"></i>
+                            <p>administrador</p>
+                        </a>
+                    </li>
+
 
                 </ul>
             </div>

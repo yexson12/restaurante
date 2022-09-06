@@ -15,10 +15,11 @@ class Bebidas extends BaseController
     public  function index()
     {
         $bedida = new Bebida();
-        $datos['producto'] = $bedida->orderBy('PRODUCTO_ID', 'ASC')->findAll();
+        $datos['producto'] = $bedida->where("ID_CATEGORIA",1)->orderBy('PRODUCTO_ID', 'ASC')->findAll();
         echo view('header');
         echo view('bebidas',$datos);
         echo view('footer');
     }
+
 
 }

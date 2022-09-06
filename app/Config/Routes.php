@@ -40,9 +40,23 @@ $routes->get('dividir/', 'Dividir::index');
 $routes->get('bebidas/', 'Bebidas::index');
 $routes->get('postres/', 'Postres::index');
 $routes->get('platos/', 'Platos::index');
+$routes->get('menugeneral/', 'Menugeneral::index');
 $routes->get('parrillas/', 'Parrillas::index');
 
-/*
+/*ADMINISTRADOR*/
+
+$routes->get('admin_pro/', 'Producto::admin_pro');
+$routes->get('crear_pro', 'Producto::crear_pro');
+$routes->post('guardar_pro', 'Producto::guardar_pro');
+$routes->get('borrar_pro/(:num)', 'Producto::borrar_pro/$1');
+$routes->get('editar_pro/(:num)', 'Producto::editar_pro/$1');
+$routes->post('actualizar_pro', 'Producto::actualizar_pro');
+
+/*FINAL ADMINISTRADOR*/
+
+/*admin
+
+
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
