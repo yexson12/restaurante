@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(public/login/bg5.jpg);
+    background-image: url('base_url()/public/uploads/bg5.jpg;');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

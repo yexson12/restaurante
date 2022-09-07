@@ -131,7 +131,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link" href="<?= base_url() ?>/dividir"   >
+                        <a class="nav-link" href="<?= base_url() ?>/login"   >
                             <i class="fas flaticon-user"></i>
                         </a>
                     </li>

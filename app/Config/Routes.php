@@ -57,7 +57,7 @@ $routes->post('combo', 'Combos::combo');
 
 // PANEL LOGIN
 
-$routes->get('login/', 'LoginController::login');
+$routes->get('login', 'LoginController::login');
 
 /*FINAL ADMINISTRADOR*/
 
