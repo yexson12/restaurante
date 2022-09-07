@@ -29,7 +29,7 @@ class Combos extends Controller
 
     public function combo()
     { 
-        $conexion=mysqli_connect('localhost','root','adminA','bd_restaurante');
+        $conexion=mysqli_connect('localhost','root','1234','bd_restaurante');
         $continente=$_POST['continente'];
         
             $sql="SELECT * FROM subcategoria where ID_CATEGORIA='$continente'";
