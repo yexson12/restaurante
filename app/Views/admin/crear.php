@@ -1,3 +1,6 @@
+
+
+
 <STyle>
     .CONTAINERHOLA {
         border: 2px red solid;
@@ -68,22 +71,9 @@
                             <br>
 
                         </div>
+                        <div id="select2lista"></div>
 
-
-                        <div class="form-group">
-                            <label for="ID_SUBCAT">SUBCATEGORIA</label>
-                            <select type="hidden" required class="form-control" name="ID_SUBCAT" id="ID_SUBCAT">
-                                <?php foreach ($subcategoria as $subcategorias) : ?>
-                                    <option value="<?= $subcategorias['ID_SUBCAT']; ?>">
-                                        <td><?= $subcategorias['NOMBRE_SUBCAT']; ?></td>
-
-                                    </option>
-
-                                <?php endforeach; ?>
-
-                            </select>
-
-                        </div>
+                  
 
                         <div class="form-group">
                             <label for="foto">imagen</label>

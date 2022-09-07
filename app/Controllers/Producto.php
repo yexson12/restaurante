@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\Bebida;
 use App\Models\Categoria;
 use App\Models\Subcategoria;
+
 class Producto extends BaseController
 {
     /**
@@ -26,18 +27,23 @@ class Producto extends BaseController
 
     public function admin_pro()
     {
+        session_start();
+        if (!isset($_SESSION['usuario'])) {
+            echo '
+        <script>
+        window.location =  "../index.php";
+        </script>';
+            session_destroy();
+            exit();
+        }
+
+
+
         $bedida = new Bebida();
-        $datos['producto'] = $bedida->where('estado',1)->findAll();
-
-       
+        $datos['producto'] = $bedida->where('estado', 1)->findAll();
 
 
-
-
-
-        echo view('header');
         echo view('admin/listar', $datos);
-        echo view('footer');
     }
     public function crear_pro()
     {
@@ -59,7 +65,7 @@ class Producto extends BaseController
         $STOCK = $this->request->getVar('STOCK');
         $ID_CATEGORIA = $this->request->getVar('ID_CATEGORIA');
         $ID_SUBCAT = $this->request->getVar('ID_SUBCAT');
-        
+
 
         if ($foto = $this->request->getFile('foto')) {
             $nuevoNombre = $foto->getRandomName();
@@ -71,7 +77,7 @@ class Producto extends BaseController
                 'STOCK' => $this->request->getVar('STOCK'),
                 'ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
                 'ID_SUBCAT' => $this->request->getVar('ID_SUBCAT'),
-                
+
                 'foto' => $nuevoNombre
 
             ];
@@ -137,11 +143,11 @@ class Producto extends BaseController
 
         if ($validacion) {
             if ($imagen = $this->request->getFile('foto')) {
-               
+
                 $bedida = new Bebida();
                 $datosproducto = $bedida->where('PRODUCTO_ID', $id)->first();
-        
-        
+
+
                 $ruta = ('public/uploads/' . $datosproducto['foto']);
                 unlink($ruta);
 
@@ -149,10 +155,9 @@ class Producto extends BaseController
                 $nuevoNombre = $imagen->getRandomName();
                 $imagen->move('public/uploads/', $nuevoNombre);
                 $datos = ['foto' => $nuevoNombre];
-              
 
-                $bedida->update($id,$datos);
-               
+
+                $bedida->update($id, $datos);
             }
         }
 

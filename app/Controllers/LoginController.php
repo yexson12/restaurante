@@ -12,7 +12,7 @@ class LoginController extends Controller{
     }
 
     public function ingresar()
-    {
+    {   session_start();
         $conexion = mysqli_connect("localhost","root","1234","bd_restaurante");
 
         $correo = $_POST['correo'];
@@ -20,6 +20,7 @@ class LoginController extends Controller{
         
         $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'
         and contrasena ='$contrasena'");
+
         $validar_estado = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'
         and contrasena ='$contrasena' ");
         
@@ -35,6 +36,16 @@ class LoginController extends Controller{
 
 
     }
+    public function cerrarsesion()
+    {
+        session_start();
+        session_destroy();
+        return $this->response->redirect((site_url('/login')));
+       
+    }
+
+
+
 
 
 }
