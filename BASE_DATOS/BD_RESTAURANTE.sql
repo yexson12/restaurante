@@ -56,15 +56,14 @@ CREATE TABLE `producto` (
   `STOCK` int NOT NULL,
   `ID_CATEGORIA` int unsigned NOT NULL,
   `ID_SUBCAT` int unsigned NOT NULL,
-  foto varchar(500) not null,
-  `ESTADO` int NOT NULL,
+  `foto` varchar(500) NOT NULL,
+  `ESTADO` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`PRODUCTO_ID`),
   KEY `FK_producto_cat` (`ID_CATEGORIA`),
   KEY `FK_producto_subcat` (`ID_SUBCAT`,`ID_CATEGORIA`),
   CONSTRAINT `FK_producto_cat` FOREIGN KEY (`ID_CATEGORIA`) REFERENCES `categoria` (`ID_CATEGORIA`),
   CONSTRAINT `FK_producto_subcat` FOREIGN KEY (`ID_SUBCAT`, `ID_CATEGORIA`) REFERENCES `subcategoria` (`ID_SUBCAT`, `ID_CATEGORIA`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+) 
 
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
