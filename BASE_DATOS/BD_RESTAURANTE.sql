@@ -74,7 +74,7 @@ CREATE TABLE `usuarios` (
   `estado` int DEFAULT '1',
   PRIMARY KEY (`id`)
 )
-
+INSERT INTO `bd_restaurante`.`usuarios` (`nombre_completo`, `correo`, `usuario`, `contrasena`, `estado`) VALUES ('admin', 'admin@gmail.com', 'admin', '123', '1');
 
 
 /*SCRIPB*/
