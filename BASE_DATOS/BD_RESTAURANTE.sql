@@ -9,16 +9,6 @@ CREATE TABLE `categoria` (
   PRIMARY KEY (`ID_CATEGORIA`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE USUARIOS (
-  ID_USER int unsigned NOT NULL AUTO_INCREMENT,
-  NOMBRE varchar(50) NOT NULL,
-  CORREO varchar(50) NOT NULL,
-  USUARIO varchar(50) NOT NULL,
-  CONTRASENA varchar(60) NOT NULL,
-  ESTADO int NOT NULL,
-  PRIMARY KEY (`ID_CATEGORIA`)
-)
-
 
 INSERT INTO `bd_restaurante`.`categoria` (`ID_CATEGORIA`, `NOMBRE_CATEGORIA`, `DES_CATEGORIA`) VALUES ('1', 'parrillas', 'todo tipo de parrillas');
 INSERT INTO `bd_restaurante`.`categoria` (`ID_CATEGORIA`, `NOMBRE_CATEGORIA`, `DES_CATEGORIA`) VALUES ('2', 'platos', 'platos tipicos');
