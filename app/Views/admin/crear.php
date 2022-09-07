@@ -47,13 +47,13 @@
 
                         <div class="form-group">
                             <label for="PRECIO_UNITARIO">PRECIO_UNITARIO</label>
-                            <input id="PRECIO_UNITARIO" value="" class="form-control" type="text" name="PRECIO_UNITARIO">
+                            <input id="PRECIO_UNITARIO" value="" class="form-control" type="number" name="PRECIO_UNITARIO">
                         </div>
 
 
                         <div class="form-group">
                             <label for="STOCK">STOCK</label>
-                            <input id="STOCK" value="" class="form-control" type="text" name="STOCK">
+                            <input id="STOCK" value="" class="form-control" type="number" name="STOCK">
                         </div>
 
 

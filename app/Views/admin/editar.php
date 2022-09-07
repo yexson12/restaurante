@@ -43,13 +43,13 @@
 
                     <div class="form-group">
                         <label for="PRECIO_UNITARIO">PRECIO_UNITARIO</label>
-                        <input id="PRECIO_UNITARIO" value="<?= $bebida['PRECIO_UNITARIO']; ?>" class="form-control" type="text" name="PRECIO_UNITARIO">
+                        <input id="PRECIO_UNITARIO" value="<?= $bebida['PRECIO_UNITARIO']; ?>" class="form-control" type="number" name="PRECIO_UNITARIO">
                     </div>
 
 
                     <div class="form-group">
                         <label for="STOCK">STOCK</label>
-                        <input id="STOCK" value="<?= $bebida['STOCK']; ?>" class="form-control" type="text" name="STOCK">
+                        <input id="STOCK" value="<?= $bebida['STOCK']; ?>" class="form-control" type="number" name="STOCK">
                     </div>
 
 
@@ -59,8 +59,8 @@
                     </div>  
                     
                     <div class="form-group">
-                        <label for="ID_SUBCAT">ESTADO</label>
-                        <input id="ID_SUBCAT" value="<?= $bebida['ID_SUBCAT']; ?>" class="form-control" type="text" name="ID_SUBCAT">
+                        <label for="ID_SUBCAT">ID_SUBCATEGORIA</label>
+                        <input id="ID_SUBCAT" value="<?= $bebida['ID_SUBCAT']; ?>" class="form-control" type="number" name="ID_SUBCAT">
                     </div>
 
 
@@ -74,7 +74,7 @@
 
                     <div class="form-group">
                         <label for="ESTADO">ESTADO</label>
-                        <input id="ESTADO" value="<?= $bebida['ESTADO']; ?>" class="form-control" type="text" name="ESTADO">
+                        <input id="ESTADO" value="<?= $bebida['ESTADO']; ?>" class="form-control" type="number" name="ESTADO">
                     </div>
 
                     <button class="btn btn-success" type="submit">guardar</button>
