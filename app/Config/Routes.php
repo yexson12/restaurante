@@ -55,6 +55,10 @@ $routes->post('combos', 'Producto::combos');
 $routes->get('entrarcombo', 'Combos::entrarcombo');
 $routes->post('combo', 'Combos::combo');
 
+// PANEL LOGIN
+
+$routes->get('login/', 'LoginController::login');
+
 /*FINAL ADMINISTRADOR*/
 
 /*admin
