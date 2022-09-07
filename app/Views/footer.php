@@ -1,5 +1,4 @@
 
-
 <footer class="footer">
     <div class="container-fluid">
         <div class="copyright ml-auto">
@@ -206,6 +205,11 @@
         </div>
     </div>
 </div>
+
+
+
+
+
 <!--   Core JS Files   -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="<?= base_url() ?>/public/atlantis/assets/js/core/popper.min.js"></script>
@@ -298,3 +302,26 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#ID_CATEGORIA').val(1);
+		recargarLista();
+
+		$('#ID_CATEGORIA').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"<?= base_url() ?>/combo",
+			data:"continente=" + $('#ID_CATEGORIA').val(),
+			success:function(r){
+				$('#select2lista').html(r);
+			}
+		});
+	}
+</script>

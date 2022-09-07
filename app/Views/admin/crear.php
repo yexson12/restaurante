@@ -58,19 +58,19 @@
 
                             <label for="ID_CATEGORIA">CATEGORIA</label>
                             <select type="hidden" required class="form-control" name="ID_CATEGORIA" id="ID_CATEGORIA">
+                                <option value="0">Selecciona una opcion</option>
                                 <?php foreach ($categoria as $categorias) : ?>
                                     <option value="<?= $categorias['ID_CATEGORIA']; ?>">
                                         <td><?= $categorias['NOMBRE_CATEGORIA']; ?></td>
-
                                     </option>
-
                                 <?php endforeach; ?>
-
                             </select>
+                            <br>
 
                         </div>
-                        <div class="form-group">
 
+
+                        <div class="form-group">
                             <label for="ID_SUBCAT">SUBCATEGORIA</label>
                             <select type="hidden" required class="form-control" name="ID_SUBCAT" id="ID_SUBCAT">
                                 <?php foreach ($subcategoria as $subcategorias) : ?>
@@ -102,27 +102,6 @@
 
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#ID_CATEGORIA').val(1);
-            recargarLista();
 
-            $('#ID_CATEGORIA').change(function() {
-                recargarLista();
-            });
-        })
-    </script>
-    <script type="text/javascript">
-        function recargarLista() {
-            $.ajax({
-                type: "POST",
-                url: "http://localhost/restaurante/controller/index",
-                data: "categoria=" + $('#ID_CATEGORIA').val(),
-                success: function(r) {
-                    $('#ID_SUBCAT').html(r);
-                }
-            });
-        }
-    </script>
 
 </div>

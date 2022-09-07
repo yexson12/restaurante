@@ -18,6 +18,10 @@
             }
         });
     </script>
+    <script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/bootstrap.min.css">
@@ -126,6 +130,11 @@
                             <i class="fas fa-list-ul"></i>
                         </a>
                     </li>
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="nav-link" href="<?= base_url() ?>/dividir"   >
+                            <i class="fas flaticon-user"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -178,6 +187,12 @@
                     <a href="<?= base_url() ?>/admin_pro"  >
                             <i class="fas fa-home"></i>
                             <p>administrador</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="<?= base_url() ?>/entrarcombo"  >
+                            <i class="fas fa-home"></i>
+                            <p>probar combos</p>
                         </a>
                     </li>
 

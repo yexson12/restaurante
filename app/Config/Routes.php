@@ -51,6 +51,9 @@ $routes->post('guardar_pro', 'Producto::guardar_pro');
 $routes->get('borrar_pro/(:num)', 'Producto::borrar_pro/$1');
 $routes->get('editar_pro/(:num)', 'Producto::editar_pro/$1');
 $routes->post('actualizar_pro', 'Producto::actualizar_pro');
+$routes->post('combos', 'Producto::combos');
+$routes->get('entrarcombo', 'Combos::entrarcombo');
+$routes->post('combo', 'Combos::combo');
 
 /*FINAL ADMINISTRADOR*/
 
