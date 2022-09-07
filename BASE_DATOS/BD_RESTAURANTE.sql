@@ -46,6 +46,16 @@ CREATE TABLE `producto` (
   CONSTRAINT `FK_producto_subcat` FOREIGN KEY (`ID_SUBCAT`, `ID_CATEGORIA`) REFERENCES `subcategoria` (`ID_SUBCAT`, `ID_CATEGORIA`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+CREATE TABLE `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre_completo` varchar(50) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `contrasena` varchar(150) NOT NULL,
+  `estado` int DEFAULT '1',
+  PRIMARY KEY (`id`)
+)
 /*SCRIPB*/
 
 select s.ID_SUBCAT,c.ID_CATEGORIA,s.NOMBRE_SUBCAT,c.NOMBRE_CATEGORIA from subcategoria s
