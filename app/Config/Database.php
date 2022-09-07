@@ -34,7 +34,7 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => '1234',
+        'password' => 'adminA',
         'database' => 'bd_restaurante',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',

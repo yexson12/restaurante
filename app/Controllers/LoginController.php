@@ -13,7 +13,7 @@ class LoginController extends Controller{
 
     public function ingresar()
     {   session_start();
-        $conexion = mysqli_connect("localhost","root","1234","bd_restaurante");
+        $conexion = mysqli_connect("localhost","root","adminA","bd_restaurante");
 
         $correo = $_POST['correo'];
         $contrasena = $_POST['contrasena'];
