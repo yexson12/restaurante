@@ -12,6 +12,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    border: red solid 2px;
 }
 
 main{

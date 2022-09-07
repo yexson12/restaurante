@@ -11,4 +11,12 @@ class LoginController extends Controller{
         echo view('Login/footer');
     }
 
+    public function ingresar()
+    {
+        echo view('Login/header');
+        echo view('Login/login');
+        echo view('Login/footer');
+    }
+
+
 }
