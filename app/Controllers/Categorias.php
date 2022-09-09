@@ -23,14 +23,9 @@ class Categorias extends Controller{
             exit();
         }
 
-
         $categorias = new categoria();
         $datos['categoria'] = $categorias->findAll();
         echo view('admin/template/headadmin');
-<<<<<<< HEAD
-
-=======
->>>>>>> dac45de58832042992fafdc6c655362d4ca127f4
         echo view('admin/categoria/listar_cat', $datos);
         echo view('admin/template/footadmin');
     }
