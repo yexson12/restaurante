@@ -27,6 +27,7 @@ main{
     max-width: 800px;
     margin: auto;
     position: relative;
+    border: 2px solid  red;
 }
 
 .caja__trasera{
@@ -36,7 +37,7 @@ main{
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 255, 47, 0.629);
+    background-color: rgba(105, 57, 235, 0.629);
 
 }
 
