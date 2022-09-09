@@ -25,6 +25,7 @@
                 </div>
 
 
+<<<<<<< HEAD
                 <button class="btn btn-success" type="submit">guardar</button>
             </form>
             </P>
@@ -33,6 +34,9 @@
 
 
 
+=======
+    </div>
+>>>>>>> 67d8756ca396458a0258a3422f63ead94169fb61
 
 
 

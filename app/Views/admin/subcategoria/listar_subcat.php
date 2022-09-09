@@ -9,6 +9,7 @@
             <thead class=" thead-light">
                 <tr>
                     <th>#</th>
+                    <th> IDCATEGORIA</th>
                     <th> NOMBRE SUBCATEGORIA</th>
                     <th> NOMBRE idCATEGORIA</th>
                     <th>ACCIONES</th>
