@@ -63,9 +63,9 @@ crossorigin="anonymous"></script>
 
     <div class="container">
         <br>
-        <br>
-        <a class="btn  btn-success" href="<?= base_url('crear_pro') ?>">crear un libro </a>
-        <a class="btn  btn-success" href="<?= base_url('cerrarsesion') ?>">cerra cesion </a>
+        <br><h1> HOLA ESTAS EN EL ADMINISTRADOR DE PRODUCTOS</h1>
+        <a class="btn  btn-success" href="<?= base_url('crear_pro') ?>">CREAR PRODUCTO </a>
+        <a class="btn  btn-success" href="<?= base_url('cerrarsesion') ?>">CERRAR SESION </a>
         <br><br>
         <table class="table table-light">
             <thead class=" thead-light">
@@ -92,6 +92,8 @@ crossorigin="anonymous"></script>
                   
                         <td>
                             <a href="<?= base_url('editar_pro/' . $bebida['PRODUCTO_ID']) ?>" class="btn btn-info" type="button">editar</a>
+                                           
+                           
                             <a href="<?= base_url('borrar_pro/'.$bebida['PRODUCTO_ID']) ?>" class="btn btn-danger" type="button">Borrar</a>
 
 

@@ -134,7 +134,7 @@
         </div>
 
       </div>
-      <img class="img-thumbnail" src="<?= base_url() ?>/uploads/<?= $bebida['foto']; ?>" alt="" width="100">
+    
       <div class="btn-box">
         <a href="">
           View More

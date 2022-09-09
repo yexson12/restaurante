@@ -41,9 +41,12 @@ class Producto extends BaseController
 
         $bedida = new Bebida();
         $datos['producto'] = $bedida->where('estado', 1)->findAll();
+        echo view('admin/template/headadmin');
+
 
 
         echo view('admin/listar', $datos);
+        echo view('admin/template/footadmin');
     }
     public function crear_pro()
     {

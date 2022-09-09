@@ -37,14 +37,15 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Menu::index');
 $routes->get('dividir/', 'Dividir::index');
-$routes->get('bebidas/', 'Bebidas::index');
-$routes->get('postres/', 'Postres::index');
-$routes->get('platos/', 'Platos::index');
+$routes->get('BEBIDAS/', 'Bebidas::index');
+$routes->get('POSTRES/', 'Postres::index');
+$routes->get('PLATOS/', 'Platos::index');
 $routes->get('menugeneral/', 'Menugeneral::index');
-$routes->get('parrillas/', 'Parrillas::index');
+$routes->get('PARRILLAS/', 'Parrillas::index');
 
 /*ADMINISTRADOR*/
 
+$routes->get('headactivate', 'Menu::headactivate');
 $routes->get('admin_pro/', 'Producto::admin_pro');
 $routes->get('crear_pro', 'Producto::crear_pro');
 $routes->post('guardar_pro', 'Producto::guardar_pro');
@@ -54,6 +55,12 @@ $routes->post('actualizar_pro', 'Producto::actualizar_pro');
 $routes->post('combos', 'Producto::combos');
 $routes->get('entrarcombo', 'Combos::entrarcombo');
 $routes->post('combo', 'Combos::combo');
+       
+/*ADMINISTRADOR CATEGORIA*/
+$routes->get('admin_cat/', 'Categorias::admin_cat');
+/* FIN ADMINISTRADOR CATEGORIA*/
+
+
 
 // PANEL LOGIN
 

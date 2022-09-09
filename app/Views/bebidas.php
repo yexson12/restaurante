@@ -48,15 +48,18 @@
       <div class="filters-contenr">
 
         <div class="row grid">
-        
-            <?php foreach ($producto as $bebida) : ?>
 
-              <div class="col-sm-6 col-lg-4 all     <?= $bebida['ID_SUBCAT']; ?>">
+          <?php foreach ($producto as $bebida) : ?>
+
+            <div class="col-sm-6 col-lg-4 all     <?= $bebida['ID_SUBCAT']; ?>">
 
               <div class="box">
                 <div>
                   <div class="img-box">
-                    <img src="<?= base_url() ?>/public/uploads/<?= $bebida['foto']; ?>" alt="">
+                  <img src="<?= base_url() ?>/public/uploads/<?= $bebida['foto']; ?>" alt="">
+               
+                 
+
                   </div>
                   <div class="detail-box">
                     <h5>
@@ -127,15 +130,15 @@
                   </div>
                 </div>
               </div>
-          </div>
+            </div>
 
-        <?php endforeach; ?>
+          <?php endforeach; ?>
 
 
         </div>
 
       </div>
-      <img class="img-thumbnail" src="<?= base_url() ?>/uploads/<?= $bebida['foto']; ?>" alt="" width="100">
+
       <div class="btn-box">
         <a href="">
           View More

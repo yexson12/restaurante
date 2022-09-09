@@ -195,20 +195,33 @@ $row= mysqli_fetch_array($resultnav)*/
 
                         </p>
 
-                        <?php foreach ($listaEmpleados as $empleado) { ?>
-                        <li class="nav-item active">
-                            <a href="<?= base_url() ?>/<?php  echo $empleado['NOMBRE_CATEGORIA'];  ?>">
+                       
+
+                        <li class="nav-item">
+                            <a href="<?= base_url() ?>/admin_pro">
                                 <i class="fas fa-home"></i>
-                                <p><?php  echo $empleado['NOMBRE_CATEGORIA'];  ?></p>
+                                <p>PRODUCTOS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url() ?>/admin_cat">
+                                <i class="fas fa-home"></i>
+                                <p>CATEGORIAS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url() ?>/admin_subcategoria">
+                                <i class="fas fa-home"></i>
+                                <p>SUBCATEGORIAS</p>
                             </a>
                         </li>
 
-
-                        <?php } ?>
-
-
-
-
+                        <li class="nav-item">
+                            <a href="<?= base_url('cerrarsesion') ?>">
+                                <i class="fas fa-home"></i>
+                                <p>CERRAR SECCION</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -216,3 +229,21 @@ $row= mysqli_fetch_array($resultnav)*/
         <!-- End Sidebar -->
 
         <div class="main-panel">
+        <STyle>
+  .CONTAINERHOLA {
+    border: 2px red solid;
+
+  }
+
+  .panel-header {
+    border: 2px greenyellow solid;
+
+  }
+
+  .page-inner {
+    border: 2px greenyellow solid;
+
+  }
+</STyle>
+
+<div class="container CONTAINERHOLA">
