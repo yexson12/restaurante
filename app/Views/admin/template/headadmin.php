@@ -210,7 +210,7 @@ $row= mysqli_fetch_array($resultnav)*/
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url() ?>/admin_subcategoria">
+                            <a href="<?= base_url() ?>/admin_subcat">
                                 <i class="fas fa-home"></i>
                                 <p>SUBCATEGORIAS</p>
                             </a>

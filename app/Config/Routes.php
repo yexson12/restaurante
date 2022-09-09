@@ -40,6 +40,7 @@ $routes->get('dividir/', 'Dividir::index');
 $routes->get('BEBIDAS/', 'Bebidas::index');
 $routes->get('POSTRES/', 'Postres::index');
 $routes->get('PLATOS/', 'Platos::index');
+$routes->get('CEVICHE/', 'Platos::index');
 $routes->get('menugeneral/', 'Menugeneral::index');
 $routes->get('PARRILLAS/', 'Parrillas::index');
 
@@ -58,17 +59,21 @@ $routes->post('combo', 'Combos::combo');
        
 /*ADMINISTRADOR CATEGORIA*/
 $routes->get('admin_cat/', 'Categorias::admin_cat');
+<<<<<<< HEAD
+=======
 $routes->get('crear_cat/', 'Categorias::crear_cat');
 $routes->get('borrar_cat/(:num)', 'Categorias::borrar_cat/$1');
 $routes->get('editar_cat/(:num)', 'Categorias::editar_cat/$1');
 $routes->post('guardar_cat', 'Categorias::guardar_cat');
 $routes->post('actualizar_cat', 'Categorias::actualizar_cat');
 
+>>>>>>> dac45de58832042992fafdc6c655362d4ca127f4
 
 /* FIN ADMINISTRADOR CATEGORIA*/
+/*ADMINISTRADOR SUBCATEGORIA*/
+$routes->get('admin_subcat/', 'Subcategorias::admin_subcat');
 
-
-
+/* FIN ADMINISTRADOR SUBCATEGORIA*/
 // PANEL LOGIN
 
 $routes->get('login', 'LoginController::login');
