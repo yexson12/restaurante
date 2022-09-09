@@ -19,12 +19,9 @@ class Categorias extends Controller{
         }
 
 
-
         $categorias = new categoria();
         $datos['producto'] = $categorias->findAll();
         echo view('admin/template/headadmin');
-
-
 
         echo view('admin/categoria/listar_cat', $datos);
         echo view('admin/template/footadmin');
