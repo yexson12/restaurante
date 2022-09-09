@@ -9,6 +9,7 @@
             <thead class=" thead-light">
                 <tr>
                     <th>#</th>
+                    <th> IDCATEGORIA</th>
                     <th> NOMBRE SUBCATEGORIA</th>
                     <th>ACCIONES</th>
                  
@@ -18,6 +19,7 @@
                 <?php foreach ($subcategoria as $subcategorias) : ?>
                     <tr>
                         <td><?= $subcategorias['ID_SUBCAT']; ?></td>
+                        <td><?= $subcategorias['ID_CATEGORIA']; ?></td>
                         <td><?= $subcategorias['NOMBRE_SUBCAT']; ?></td>
                         
                   

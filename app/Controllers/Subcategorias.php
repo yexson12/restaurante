@@ -80,8 +80,8 @@ class Subcategorias extends Controller
         $subcategorias = new Subcategoria();
 
 
-        $datos = ['ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
-        'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT') 
+            $datos = ['ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
+            'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT') 
             
         ];
 
@@ -94,7 +94,7 @@ class Subcategorias extends Controller
         public function borrar_subcat($id = null)
     {
         $subcategorias = new Subcategoria();
-        $datosproducto = $subcategorias->where('ID_SUBCAT', $id)->first();
+        
 
         $subcategorias->where('ID_SUBCAT', $id)->delete($id);
         return $this->response->redirect((site_url('/admin_subcat')));
