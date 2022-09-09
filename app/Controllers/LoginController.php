@@ -26,7 +26,7 @@ class LoginController extends Controller{
         
         if (mysqli_num_rows($validar_login) > 0){
             $_SESSION['usuario'] = $correo;
-            return $this->response->redirect((site_url('/admin_pro')));
+            return $this->response->redirect((site_url('/admin_general')));
             exit;
             
         }else{

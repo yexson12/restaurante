@@ -36,16 +36,29 @@ class Producto extends BaseController
             session_destroy();
             exit();
         }
+        $bedida = new Bebida();
+        $datos['producto'] = $bedida->where('estado', 1)->findAll();
+
+        echo view('admin/admin', $datos);
+    }
 
 
 
+    public function admin_general()
+    {
+        session_start();
+        if (!isset($_SESSION['usuario'])) {
+            echo '
+        <script>
+        window.location =  "../index.php";
+        </script>';
+            session_destroy();
+            exit();
+        }
         $bedida = new Bebida();
         $datos['producto'] = $bedida->where('estado', 1)->findAll();
         echo view('admin/template/headadmin');
-
-
-
-        echo view('admin/listar', $datos);
+        echo view('admin/admin', $datos);
         echo view('admin/template/footadmin');
     }
     public function crear_pro()
@@ -106,9 +119,9 @@ class Producto extends BaseController
 
     public function editar_pro($id = null)
     {
-      
-     
-      
+
+
+
 
         $bebida = new Bebida();
         $datos['bebida'] = $bebida->where('PRODUCTO_ID', $id)->first();

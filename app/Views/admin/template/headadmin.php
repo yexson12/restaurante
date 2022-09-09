@@ -1,249 +1,105 @@
-<?php
-/*$servidor = "mysql:dbname=bd_restaurante;host=localhost";
-$usuario = "root";
-$password = "1234";
-
-        try {
-            $pdo = new PDO($servidor, $usuario, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"));
-            // echo "conectado...";
-        } catch (PDOException $e) {
-            echo "Conexion mala.. " .$e->getMessage();
-        }
-        
-        $sentencia = $pdo->prepare("SELECT ID_CATEGORIA ,DES_CATEGORIA ,UCASE(NOMBRE_CATEGORIA) as NOMBRE_CATEGORIA   FROM categoria");
-        $sentencia->execute();
-        $listaEmpleados = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
-
-        $nav ="SELECT * FROM categoria limit 4";
-        $resultnav=mysqli_query($conexion,$nav);
-$row= mysqli_fetch_array($resultnav)*/
-
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>El Parrillero</title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="<?= base_url() ?>/public/atlantis/assets/img/icon.ico" type="image/x-icon" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png'); ?>">
+    <title>Sistema Ventas CI2</title>
     <!-- Fonts and icons -->
-    <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/webfont/webfont.min.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                "families": ["Lato:300,400,700,900"]
-            },
-            custom: {
-                "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
-                urls: ['<?= base_url() ?>/public/atlantis/assets/css/fonts.min.css']
-            },
-            active: function() {
-                sessionStorage.fonts = true;
-            }
-        });
-    </script>
-    
- 
-  
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="<?= base_url('/public/assets/css/nucleo-icons.css'); ?>" rel="stylesheet" />
+    <link href="<?= base_url('/public/assets/css/fontawesome.css'); ?>" rel="stylesheet" />
     <!-- CSS Files -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/atlantis.css">
-    <!-- PARTE YEXSON  -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/responsive.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/style.css">
-    <!-- FIN PARTE YEXSON -->
-    <!-- Input Spinner -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/input-spinner.css">
-
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/atlantis/assets/css/demo.css">
-
-    <style>
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        .input-spinner {
-            height: 20px !important;
-            width: 50px !important;
-            font-size: 12px;
-        }
-
-        .lista-item-personas {
-            background: white !important;
-            box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1) !important;
-            border-radius: 10px !important;
-        }
-
-        .empty-person {
-            /* padding: 70px 60px 80px !important; */
-            border: 3px dashed rgba(0, 0, 0, 0.247) !important;
-            background: transparent !important;
-            height: 100%;
-        }
-    </style>
-
+    <link id="pagestyle" href="<?= base_url('/public/assets/css/argon-dashboard.css'); ?>" rel="stylesheet" />
+    <link id="pagestyle" href="<?= base_url('/public/assets/css/style.css'); ?>" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="wrapper">
-        <div class="main-header">
-            <!-- Logo Header -->
-            <div class="logo-header" data-background-color="blue">
-
-                <a href="index.html" class="logo">
-                    <img src="<?= base_url() ?>/public/atlantis/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+<body class="g-sidenav-show bg-gray-100 prt">
+    <div class="min-height-300 bg-primary position-absolute w-100 prt"></div>
+    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4" id="sidenav-main">
+        <div class="sidenav-scrollbar">
+            <div class="sidenav-header">
+                <a class="navbar-brand m-0" href="<?= base_url('dashboard'); ?>">
+                    <img src="<?= base_url('/public/assets/img/logo-ct-dark.svg'); ?>" class="navbar-brand-img h-100">
+                    <span class="ms-1 font-weight-bold">Sistema Ventas CI2</span>
                 </a>
-                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-concierge-bell"></i>
-                    </span>
-                </button>
-                <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
-                <div class="nav-toggle">
-                    <button class="btn btn-toggle toggle-sidebar">
-                        <i class="fas fa-concierge-bell"></i>
-                    </button>
-                </div>
             </div>
-            <!-- End Logo Header -->
-
-            <!-- Navbar Header -->
-            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-
-                <div class="container-fluid">
-                    <div class="collapse" id="search-nav">
-                        <form class="navbar-left navbar-form nav-search mr-md-3">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button type="submit" class="btn btn-search pr-1">
-                                        <i class="fa fa-search search-icon"></i>
-                                    </button>
-                                </div>
-                                <input type="text" placeholder="Search ..." class="form-control">
+            <hr class="horizontal dark mt-0">
+            <div class="collapse navbar-collapse w-auto h-auto ps" id="sidenav-collapse-main">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('dashboard'); ?>" :class="dashboardClass">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-chart-pie text-dark text-sm opacity-10"></i>
                             </div>
-                        </form>
-                    </div>
-                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-                        <li class="nav-item toggle-nav-search hidden-caret">
-                            <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown hidden-caret">
-                            <a class="nav-link" href="<?= base_url() ?>/dividir">
-                                <i class="fas fa-coins"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link quick-sidebar-toggler">
-                                <i class="fas fa-list-ul"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown hidden-caret">
-                            <a class="nav-link" href="<?= base_url() ?>/login">
-                                <i class="fas flaticon-user"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- End Navbar -->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="sidebar sidebar-style-2">
-            <div class="sidebar-wrapper scrollbar scrollbar-inner">
-                <div class="sidebar-content">
-                    <div class="user">
-                        <!-- <div class="avatar-sm float-left mr-2 d-flex justify-content-center align-items-center">
-                        <i class="fas fa-apple-alt fa-2x text-center text-muted"></i>
-                    </div> -->
-
-                        <div class="info d-flex justify-content-center align-items-center">
-
-                            <a href="<?= base_url() ?>/menugeneral">
-                                <span class="h2 text-center text-muted m-0"><b>~MENU~</b>
-                                </span>
-                            </a>
-                            <div class="clearfix"></div>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#store" class="nav-link" aria-expanded="false">
+                            <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-box text-dark text-sm"></i>
+                            </div>
+                            <span class="nav-link-text ms-2">Almacen</span>
+                        </a>
+                        <div class="collapse" id="store">
+                            <ul class="nav ms-4">
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('categoria'); ?>"><span class="sidenav-normal">Categorias</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('producto'); ?>"><span class="sidenav-normal">Productos</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#buy" class="nav-link" aria-expanded="false">
+                            <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-truck-fast text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-2">Compras</span>
+                        </a>
+                        <div class="collapse" id="buy">
+                            <ul class="nav ms-4">
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('proveedor'); ?>"><span class="sidenav-normal">Proveedores</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('compra'); ?>"><span class="sidenav-normal">Compras</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#sale" class="nav-link" aria-expanded="false">
+                            <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-cart-shopping text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-2">Ventas</span>
+                        </a>
+                        <div class="collapse" id="sale">
+                            <ul class="nav ms-4">
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('cliente'); ?>"><span class="sidenav-normal">Clientes</span></a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('venta'); ?>"><span class="sidenav-normal">Ventas</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('usuario'); ?>">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-users-gear text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text">Usuarios</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidenav-footer mx-3 ">
+                <div class="card card-plain shadow-none" id="sidenavCard">
+                    <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/illustrations/icon-documentation.svg'); ?>">
+                    <div class="card-body text-center p-3 w-100 pt-0">
+                        <div class="docs-info">
+                            <h6 class="mb-0">Argon Dashboard</h6>
+                            <p class="text-xs font-weight-bold mb-0">Bootstrap 5 Admin Template</p>
                         </div>
                     </div>
-
-
-                    <ul class="nav nav-primary">
-                        <p>
-
-
-                        </p>
-
-                       
-
-                        <li class="nav-item">
-                            <a href="<?= base_url() ?>/admin_pro">
-                                <i class="fas fa-home"></i>
-                                <p>PRODUCTOS</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url() ?>/admin_cat">
-                                <i class="fas fa-home"></i>
-                                <p>CATEGORIAS</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url() ?>/admin_subcat">
-                                <i class="fas fa-home"></i>
-                                <p>SUBCATEGORIAS</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="<?= base_url('cerrarsesion') ?>">
-                                <i class="fas fa-home"></i>
-                                <p>CERRAR SECCION</p>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
+                <a class="btn btn-dark btn-sm mb-0 w-100" href="https://www.creative-tim.com/product/argon-dashboard">Ver template</a>
             </div>
         </div>
-        <!-- End Sidebar -->
-
-        <div class="main-panel">
-        <STyle>
-  .CONTAINERHOLA {
-    border: 2px red solid;
-
-  }
-
-  .panel-header {
-    border: 2px greenyellow solid;
-
-  }
-
-  .page-inner {
-    border: 2px greenyellow solid;
-
-  }
-</STyle>
-
-<div class="container CONTAINERHOLA">
+    </aside>
