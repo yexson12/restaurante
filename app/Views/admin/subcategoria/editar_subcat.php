@@ -8,14 +8,14 @@
 
             <form action="<?= site_url('/actualizar_subcat') ?>" method="post" enctype="multipart/form-data">
                 <label for="STOCK">solo es para pruebas</label>
-                <input type="text" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT'];?>">
+                <input type="text" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT']; ?>">
 
+              
 
-            
                 <div class="form-group">
-                        <label for="ID_CATEGORIA">NOMBRE SUBCATEGORIA</label>
-                        <input id="ID_CATEGORIA" value="<?=$subcategoria['ID_CATEGORIA']; ?>" class="form-control" type="text" name="ID_CATEGORIA">
-                    </div>
+                    <label for="ID_CATEGORIA">ID CATEGORIA</label>
+                    <input id="ID_CATEGORIA" value="<?= $subcategoria['ID_CATEGORIA']; ?>" class="form-control" type="text" name="ID_CATEGORIA">
+                </div>
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-    </div>
+</div>
 
 
 

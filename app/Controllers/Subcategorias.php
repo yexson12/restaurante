@@ -5,12 +5,12 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Subcategoria;
 
-
+use App\Models\categoria;
 
 class Subcategorias extends Controller
 {
 
- /**
+    /**
      * Instance of the main Request object.
      *
      * @var HTTP\IncomingRequest
@@ -40,27 +40,29 @@ class Subcategorias extends Controller
 
     public function crear_subcat()
     {
-       
-     echo view('admin/template/headadmin');
-        echo view('admin/subcategoria/crear_subcat');
+        $categorias = new categoria();
+        $datos['categoria'] = $categorias->findAll();
+
+        echo view('admin/template/headadmin');
+        echo view('admin/subcategoria/crear_subcat',$datos);
         echo view('admin/template/footadmin');
     }
 
-    
+
     public function guardar_subcat()
     {
         $subcategorias = new Subcategoria();
         $ID_CATEGORIA = $this->request->getVar('ID_CATEGORIA');
         $NOMBRE_SUBCAT = $this->request->getVar('NOMBRE_SUBCAT');
-        
-    
-            $datos = ['ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
+
+
+        $datos = [
+            'ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
             'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT')
         ];
 
-            $subcategorias->insert($datos);
-            return $this->response->redirect((site_url('/admin_subcat')));
-        
+        $subcategorias->insert($datos);
+        return $this->response->redirect((site_url('/admin_subcat')));
     }
 
     public function editar_subcat($id = null)
@@ -69,9 +71,9 @@ class Subcategorias extends Controller
 
         $subcategorias = new subcategoria();
         $datos['subcategoria'] = $subcategorias->where('ID_SUBCAT', $id)->first();
-            
+
         echo view('admin/template/headadmin');
-        echo view('admin/subcategoria/editar_subcat',$datos);
+        echo view('admin/subcategoria/editar_subcat', $datos);
         echo view('admin/template/footadmin');
     }
 
@@ -80,14 +82,15 @@ class Subcategorias extends Controller
         $subcategorias = new subcategoria();
 
 
-            $datos = ['ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
-            'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT') 
-            
+        $datos = [
+            'ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
+            'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT')
+
         ];
 
         $id = $this->request->getVar('ID_SUBCAT');
         $subcategorias->update($id, $datos);
-       
+
         return $this->response->redirect((site_url('/admin_subcat')));
     }
 
@@ -95,10 +98,10 @@ class Subcategorias extends Controller
 
 
 
-        public function borrar_subcat($id = null)
+    public function borrar_subcat($id = null)
     {
         $subcategorias = new Subcategoria();
-        
+
 
         $subcategorias->where('ID_SUBCAT', $id)->delete($id);
         return $this->response->redirect((site_url('/admin_subcat')));
