@@ -106,13 +106,15 @@ class Producto extends BaseController
 
     public function editar_pro($id = null)
     {
-
+      
+     
+      
 
         $bebida = new Bebida();
         $datos['bebida'] = $bebida->where('PRODUCTO_ID', $id)->first();
-        echo view('header');
+        echo view('admin/template/headadmin');
         echo view('admin/editar', $datos);
-        echo view('footer');
+        echo view('admin/template/footadmin');
     }
 
 
