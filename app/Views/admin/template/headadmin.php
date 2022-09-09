@@ -1,5 +1,5 @@
 <?php
-$servidor = "mysql:dbname=bd_restaurante;host=localhost";
+/*$servidor = "mysql:dbname=bd_restaurante;host=localhost";
 $usuario = "root";
 $password = "1234";
 
@@ -15,7 +15,7 @@ $password = "1234";
         $listaEmpleados = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-        /*$nav ="SELECT * FROM categoria limit 4";
+        $nav ="SELECT * FROM categoria limit 4";
         $resultnav=mysqli_query($conexion,$nav);
 $row= mysqli_fetch_array($resultnav)*/
 

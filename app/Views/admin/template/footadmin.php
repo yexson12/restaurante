@@ -303,25 +303,4 @@
 
 </html>
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#ID_CATEGORIA').val(1);
-		recargarLista();
 
-		$('#ID_CATEGORIA').change(function(){
-			recargarLista();
-		});
-	})
-</script>
-<script type="text/javascript">
-	function recargarLista(){
-		$.ajax({
-			type:"POST",
-			url:"<?= base_url() ?>/combo",
-			data:"continente=" + $('#ID_CATEGORIA').val(),
-			success:function(r){
-				$('#select2lista').html(r);
-			}
-		});
-	}
-</script>

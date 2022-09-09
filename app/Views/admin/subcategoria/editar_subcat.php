@@ -1,41 +1,39 @@
+<div class="container">
 
-    <div class="container">
 
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ingresar datos del libro</h5>
+            <p class="card-text">
 
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">ingresar datos del libro</h5>
-                <p class="card-text">
-
-                <form action="<?= site_url('/actualizar_subcat') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('/actualizar_subcat') ?>" method="post" enctype="multipart/form-data">
                 <label for="STOCK">solo es para pruebas</label>
                 <input type="text" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT'];?>">
-               
-               
+
+
+            
                 <div class="form-group">
-                        <label for="ID_CATEGORIA">nombre</label>
-                        <input id="ID_CATEGORIA" value="<?= $subcategoria['ID_CATEGORIA']; ?>" class="form-control" type="text" name="ID_CATEGORIA">
-                    </div>
-             
-
-                    <div class="form-group">
-                        <label for="NOMBRE_SUBCAT">nombre</label>
-                        <input id="NOMBRE_SUBCAT" value="<?= $subcategoria['NOMBRE_SUBCAT']; ?>" class="form-control" type="text" name="NOMBRE_SUBCAT">
+                        <label for="ID_CATEGORIA">NOMBRE SUBCATEGORIA</label>
+                        <input id="ID_CATEGORIA" value="<?=$subcategoria['ID_CATEGORIA']; ?>" class="form-control" type="text" name="ID_CATEGORIA">
                     </div>
 
 
-                    <button class="btn btn-success" type="submit">guardar</button>
-                </form>
-                </P>
-            </div>
+
+                <div class="form-group">
+                    <label for="NOMBRE_SUBCAT">nombre</label>
+                    <input id="NOMBRE_SUBCAT" value="<?= $subcategoria['NOMBRE_SUBCAT']; ?>" class="form-control" type="text" name="NOMBRE_SUBCAT">
+                </div>
+
+
+                <button class="btn btn-success" type="submit">guardar</button>
+            </form>
+            </P>
         </div>
-
-
-
-
-
-
     </div>
 
 
 
+
+
+
+</div>

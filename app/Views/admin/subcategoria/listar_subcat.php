@@ -10,6 +10,7 @@
                 <tr>
                     <th>#</th>
                     <th> NOMBRE SUBCATEGORIA</th>
+                    <th> NOMBRE idCATEGORIA</th>
                     <th>ACCIONES</th>
                  
                 </tr>
@@ -18,14 +19,15 @@
                 <?php foreach ($subcategoria as $subcategorias) : ?>
                     <tr>
                         <td><?= $subcategorias['ID_SUBCAT']; ?></td>
+                        <td><?= $subcategorias['ID_CATEGORIA']; ?></td>
                         <td><?= $subcategorias['NOMBRE_SUBCAT']; ?></td>
                         
                   
                         <td>
-                            <a href="<?= base_url('editar_subcat/'. $subcategorias['ID_SUBCAT']) ?>" class="btn btn-info" type="button">editar</a>
+                            <a href="<?= base_url('editar_subcat/'.$subcategorias['ID_SUBCAT'])?>" class="btn btn-info" type="button">editar</a>
                                            
                            
-                            <a href="<?= base_url('borrar_subcat/'.$subcategorias['ID_SUBCAT']) ?>" class="btn btn-danger" type="button">Borrar</a>
+                            <a href="<?= base_url('borrar_subcat/'.$subcategorias['ID_SUBCAT'])?>" class="btn btn-danger" type="button">Borrar</a>
 
 
                         </td>

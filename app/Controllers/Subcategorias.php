@@ -67,7 +67,7 @@ class Subcategorias extends Controller
     {
 
 
-        $subcategorias = new Subcategoria();
+        $subcategorias = new subcategoria();
         $datos['subcategoria'] = $subcategorias->where('ID_SUBCAT', $id)->first();
             
         echo view('admin/template/headadmin');
@@ -77,7 +77,7 @@ class Subcategorias extends Controller
 
     public function actualizar_subcat()
     {
-        $subcategorias = new Subcategoria();
+        $subcategorias = new subcategoria();
 
 
         $datos = ['ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
@@ -90,6 +90,10 @@ class Subcategorias extends Controller
        
         return $this->response->redirect((site_url('/admin_subcat')));
     }
+
+
+
+
 
         public function borrar_subcat($id = null)
     {

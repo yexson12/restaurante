@@ -54,7 +54,7 @@ class Producto extends BaseController
         $subcategorias = new subcategoria();
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
         $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'ASC')->findAll();
-        echo view('header');
+        echo view('admin/template/headadmin');
         echo view('admin/crear', $datos);
         echo view('footer');
     }
