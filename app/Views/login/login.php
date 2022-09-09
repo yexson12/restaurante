@@ -25,9 +25,9 @@
                 <button id="btn__iniciar-sesion">Iniciar Sesión</button>
             </div>
             <div class="caja__trasera-register">
-                <h3>¿Aún no tienes una cuenta?</h3>
-                <p>Regístrate para que puedas iniciar sesión</p>
-                <button id="btn__registrarse">Regístrarse</button>
+                <h3>¿Olvidaste tu contraseña?</h3>
+            
+                <button id="btn__registrarse">VER MAS</button>
             </div>
         </div>
 
@@ -43,12 +43,10 @@
 
             <!--Register-->
             <form action="php/registro.php" method="POST" class="formulario__register">
-                <h2>Regístrarse</h2>
-                <input type="text" placeholder="Nombre completo" name="nombreU">
-                <input type="text" placeholder="Correo Electronico" name="correo">
-                <input type="text" placeholder="Usuario" name="usuario">
-                <input type="password" placeholder="Contraseña" name="contrasena">
-                <button>Regístrarse</button>
+                <h2>Somos</h2>
+                <h2>NEW STAR</h2>
+           <p> Si olvidaste tu contraseña llama a 111111</p>
+            
             </form>
         </div>
     </div>
