@@ -1,0 +1,29 @@
+.input-spinner{
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 15px;
+    width: 60px;
+    border: none;
+    background-color: #ffffff;
+    color: #202030;
+}
+.input-spinner::-webkit-outer-spin-button,
+.input-spinner::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.button-spinner{
+    color: #3264fe;
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.button-spinner #decrement{
+    padding: 15px 5px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+.button-spinner #increment{
+    padding: 15px 25px 15px 5px;
+    border-radius: 0 45px 45px 0;
+}

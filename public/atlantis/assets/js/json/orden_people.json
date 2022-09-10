@@ -1,0 +1,29 @@
+[
+    {
+        "people_index": 1,
+        "item_asignado": 2,
+        "cantidad": 2
+    },
+    {
+        "people_index": 1,
+        "item_asignado": 3, 
+        "cantidad": 1
+    },
+    {
+        "people_index": 2,
+        "item_asignado": 4,
+        "cantidad": 1
+    },
+    {
+        "people_index": 2,
+        "item_asignado": 3,
+        "cantidad": 2
+    },
+    {
+        "index_persona": 2,
+        "items_asignado": [
+            {"index":2, "cantidad": 1},
+            {"index":3, "cantidad": 1}
+        ]
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "index": 1,
+        "nombre": "persona 1",
+        "items_asignado": [
+            {
+                "item_id": 1,
+                "cantidad_seleccionada": 2
+            },
+            {
+                "item_id": 2,
+                "cantidad_seleccionada": 1
+            }
+        ],
+        "monto_por_items": 0,
+        "monto_personalizado": 0
+    },
+    {
+        "index": 2,
+        "nombre": "persona 2",
+        "items_asignado": [
+            {"index":2, "cantidad": 1},
+            {"index":3, "cantidad": 1}
+        ],
+        "monto_por_items": 0,
+        "monto_personalizado": 0
+    },
+    {
+        "index": 2,
+        "nombre": "persona 2",
+        "items_asignado": [],
+        "monto_por_items": 0,
+        "monto_personalizado": 0
+    }
+]

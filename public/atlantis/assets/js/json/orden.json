@@ -1,0 +1,56 @@
+[
+    {
+        "index": 1,
+        "categoria": "plato",
+        "nombre": "Platillo nombre 1",
+        "descripcion": "Platillo nombre 1 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "3",
+        "precio_unitario": "32.90",
+        "precio_total": "98.7"
+    },
+    {
+        "index": 2,
+        "categoria": "plato",
+        "nombre": "Platillo nombre 2",
+        "descripcion": "Platillo nombre 2 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "3",
+        "precio_unitario": "36.90",
+        "precio_total": "110.70"
+    },
+    {
+        "index": 3,
+        "categoria": "bebida",
+        "nombre": "Bebida nombre 1",
+        "descripcion": "Bebida nombre 1 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "5",
+        "precio_unitario": "6.90",
+        "precio_total": "34.50"
+    },
+    {
+        "index": 4,
+        "categoria": "bebida",
+        "nombre": "Bebida nombre 2",
+        "descripcion": "Bebida nombre 2 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "3",
+        "precio_unitario": "5.90",
+        "precio_total": "17.7"
+    },
+    {
+        "index": 5,
+        "categoria": "postre",
+        "nombre": "Postre nombre 1",
+        "descripcion": "Postre nombre 1 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "5",
+        "precio_unitario": "12.90",
+        "precio_total": "64.50"
+    },
+    {
+        "index": 6,
+        "categoria": "Parrilla",
+        "nombre": "Parrilla nombre 1",
+        "descripcion": "Parrilla nombre 1 Nulla et minim ut non culpa ipsum dolor ea.Ut labore excepteur dolor sint laboris sint eu.",
+        "cantidad": "2",
+        "precio_unitario": "45.90",
+        "precio_total": "91.80"
+    }
+]

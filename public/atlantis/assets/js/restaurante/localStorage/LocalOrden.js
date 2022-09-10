@@ -1,0 +1,95 @@
+class LocalOrden {
+    
+    constructor(){
+        this.kodoti = new KodotiLocalCache('kodoti');
+        this.NAME_LOCAL = 'orden';
+        if(!this.existLocalStorage()){
+            this.kodoti.add(this.NAME_LOCAL, []);
+        }
+    }
+
+    get orden(){
+        return this.kodoti.get(this.NAME_LOCAL);
+    }
+
+    get_by_index(index){
+        for(let item of this.orden){
+            if(item['index'] == index){
+                return item;
+            }
+        }
+        return [];
+    }
+
+    agregar(array){
+        this.kodoti.add(this.NAME_LOCAL, array);
+    }
+
+    actualizar(array){
+        let orden = this.orden;
+        for (let i = 0; i < orden.length; i++) {
+            if(orden[i]['index'] == array['index']){
+                orden[i] = array;
+                break;
+            }
+        }
+        this.kodoti.delete(this.NAME_LOCAL);
+        this.kodoti.add(this.NAME_LOCAL, orden);
+    }
+
+    // actualizar(index, data){
+    //     let orden = this.orden;
+    //     let item_orden = this.get_by_index(index);
+    //     for (let i = 0; i < orden.length; i++) {
+    //         if(orden[i]['index'] == index){
+    //             item_orden[data.campo] = data.valor;
+    //             orden[i] = item_orden; 
+    //             break;
+    //         }
+    //     }
+
+    //     this.kodoti.delete(this.NAME_LOCAL);
+    //     this.kodoti.add(this.NAME_LOCAL, orden);
+    // }
+
+    delete(index){
+        let orden = this.orden;
+        for (let i = 0; i < orden.length; i++) {
+            if(orden[i]['index'] == index){
+                orden.splice(i,1);
+                break;
+            }
+        }
+        this.kodoti.delete(this.NAME_LOCAL);
+        this.kodoti.add(this.NAME_LOCAL, orden);
+    }
+
+    calcularCuentaTotal(){
+        let total = 0;
+        for(let item of this.orden){
+            total = parseFloat(item.precio_total) + total;
+        }
+        return total;
+    }
+
+    existLocalStorage(){
+        if(this.orden == undefined || this.orden == null){
+            return false;
+        }
+        return true;
+    }
+
+    // indexarArray(array){
+        
+    //     const indexes = [];
+    //     console.log(typeof this.orden)
+    //     console.log(this.orden)
+    //     for(let index of this.orden){
+    //         indexes.push(index);
+    //     }
+    //     let ultimo_indice = Math.max(indexes);
+    //     array['index'] = ultimo_indice + 1;
+    //     return array;
+    // }
+
+}
