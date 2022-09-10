@@ -24,9 +24,8 @@
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="dropdownMenuButton">
 							<li><a class="dropdown-item border-radius-md" href="<?= base_url('perfil'); ?>"><i class="fa-solid fa-user me-1"></i> Ver perfil</a></li>
-							<form method="POST" action="<?= route_to('logout'); ?>">
-								<li><button class="dropdown-item border-radius-md" type="submit"><i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar sessión</button></li>
-							</form>
+                            <li><a class="dropdown-item border-radius-md" href="<?= base_url('cerrarsesion'); ?>"><i class="fa-solid fa-user me-1"></i> Cerrar Sesion</a></li>
+
 						</ul>
 					</li>
 					<li class="nav-item d-xl-none ps-0 d-flex align-items-center">
