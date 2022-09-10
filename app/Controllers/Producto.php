@@ -6,7 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\Bebida;
 use App\Models\Categoria;
 use App\Models\Subcategoria;
-
+use Config\Services;
 class Producto extends BaseController
 {
     /**
@@ -183,4 +183,33 @@ class Producto extends BaseController
 
         return $this->response->redirect((site_url('/admin_pro')));
     }
+
+
+    public function uploadFile()
+	{
+        $bedida = new Bebida();
+
+		$validationRule = [
+            'productfile' => [
+                'label' => 'Upload files',
+                'rules' => 'uploaded[productfile]|max_size[productfile,2000]|mime_in[productfile,image/jpg,image/pjpeg,image/jpeg,image/png]'
+            ],
+        ];
+
+        if (!$this->validate($validationRule)) {
+            $response = ['type' => "error", 'message' => $this->validator->getError()];
+			echo json_encode($response);
+        } else {
+			$session = Services::session();
+			$file = $this->request->getFile('productfile');
+			$idUser = $session->get('idProduct');
+			$name = hash('haval128,5', $idUser).'.'.$file->getClientExtension();
+
+			$file->move('./assets/img/product', $name, true);
+			$bedida->createProduct($idUser, ['picture' => base_Url('assets/img/product/'.$name)]);
+
+			$response = ['type' => "success", 'message' => "El archivo se subió correctamente."];
+			echo json_encode($response);
+		}
+	}
 }
