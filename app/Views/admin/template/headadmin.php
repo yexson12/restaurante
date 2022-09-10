@@ -46,7 +46,7 @@
                         <div class="collapse" id="store">
                             <ul class="nav ms-4">
                                 <li class="nav-item"><a class="nav-link" href="<?= base_url('categoria'); ?>"><span class="sidenav-normal">Categorias</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('producto'); ?>"><span class="sidenav-normal">Productos</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?= base_url('admin_pro'); ?>"><span class="sidenav-normal">Productos</span></a></li>
                             </ul>
                         </div>
                     </li>
@@ -103,3 +103,4 @@
             </div>
         </div>
     </aside>
+    

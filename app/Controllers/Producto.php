@@ -38,8 +38,9 @@ class Producto extends BaseController
         }
         $bedida = new Bebida();
         $datos['producto'] = $bedida->where('estado', 1)->findAll();
-
-        echo view('admin/admin', $datos);
+        echo view('admin/template/headadmin');
+        echo view('admin/producto/listar', $datos);
+        echo view('admin/template/footadmin');
     }
 
 
@@ -68,8 +69,9 @@ class Producto extends BaseController
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
         $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'ASC')->findAll();
         echo view('admin/template/headadmin');
-        echo view('admin/crear', $datos);
-        echo view('footer');
+        echo view('admin/producto/crear', $datos);
+        echo view('admin/producto/foot');
+        echo view('admin/js/product');
     }
 
     public function guardar_pro()
@@ -126,7 +128,7 @@ class Producto extends BaseController
         $bebida = new Bebida();
         $datos['bebida'] = $bebida->where('PRODUCTO_ID', $id)->first();
         echo view('admin/template/headadmin');
-        echo view('admin/editar', $datos);
+        echo view('admin/producto/editar', $datos);
         echo view('admin/template/footadmin');
     }
 

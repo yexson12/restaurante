@@ -23,6 +23,13 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'auth'     => \Fluent\Auth\Filters\AuthenticationFilter::class,
+		'confirm'  => [
+			\Fluent\Auth\Filters\AuthenticationFilter::class,
+			\Fluent\Auth\Filters\ConfirmPasswordFilter::class,
+		],
+		'guest'    => \Fluent\Auth\Filters\RedirectAuthenticatedFilter::class,
+		'throttle' => \Fluent\Auth\Filters\ThrottleFilter::class,
     ];
 
     /**
