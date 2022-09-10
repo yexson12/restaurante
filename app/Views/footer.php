@@ -188,6 +188,7 @@
 <!-- nice select -->
 <!-- FIN PARTE YEXSON  -->
 
+<script src="<?= base_url() ?>/public/atlantis/assets/js/restaurante/app/menu.js"></script>
 
 
 </body>

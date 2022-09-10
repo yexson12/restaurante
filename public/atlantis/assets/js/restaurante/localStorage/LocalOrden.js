@@ -22,7 +22,23 @@ class LocalOrden {
     }
 
     agregar(array){
-        this.kodoti.add(this.NAME_LOCAL, array);
+        let orden = this.orden;
+        let orden_by_index = this.get_by_index(array.index);
+        //alert("llego agregar")
+        console.log('llego agregar');
+        console.log(orden_by_index.lenght );
+        if (orden_by_index.length == 0 ){
+            console.log('nuevo')
+            orden.push(array);
+            this.kodoti.add(this.NAME_LOCAL, orden);
+        } else {
+            console.log('actualizd')
+            orden_by_index.cantidad = orden_by_index.cantidad + array.cantidad;
+            orden_by_index.precio_total = orden_by_index.precio_unitario * orden_by_index.cantidad;
+            let indice_item = orden.findIndex((elemento) => elemento.index == array.index);
+            orden[indice_item] = orden_by_index;
+            this.kodoti.add(this.NAME_LOCAL, orden);
+        }
     }
 
     actualizar(array){
