@@ -7,7 +7,7 @@ use App\Models\Subcategoria;
 use App\Models\categoria;
 class Parrillas extends BaseController
 {
-    public function index()
+    public function index($id=null)
     {
         $bedida = new Bebida();
         $datos['producto'] = $bedida->where("ID_CATEGORIA",1)->orderBy('PRODUCTO_ID', 'ASC')->findAll();
