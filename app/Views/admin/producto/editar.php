@@ -23,8 +23,8 @@
 							<img src="" class="profile-img rounded-circle img-fluid border border-2 border-white">
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="dropdownMenuButton">
-							<li><a class="dropdown-item border-radius-md" href="<?= base_url('perfil');?>"><i class="fa-solid fa-user me-1"></i> Ver perfil</a></li>
-							<form method="POST" action="<?= route_to('logout');?>">
+							<li><a class="dropdown-item border-radius-md" href="<?= base_url('perfil'); ?>"><i class="fa-solid fa-user me-1"></i> Ver perfil</a></li>
+							<form method="POST" action="<?= route_to('logout'); ?>">
 								<li><button class="dropdown-item border-radius-md" type="submit"><i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar sessión</button></li>
 							</form>
 						</ul>
@@ -51,59 +51,70 @@
 					<div class="card-header pb-0">
 						<div class="d-flex align-items-center">
 							<p class="mb-0">Actualizar producto</p>
-							<a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('producto');?>">Volver</a>
+							<a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('admin_pro'); ?>">Volver</a>
 						</div>
 					</div>
-					<form>
+					<form action="<?= site_url('/actualizar_pro') ?>" method="post" enctype="multipart/form-data">
 						<div class="card-body">
+							<input type="hidden" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<div class="form-group">
-										<label for="example-text-input" class="form-control-label">Código de barras</label>
-										<input v-model="barcode" class="form-control" type="text" placeholder="Valor del código de barras" :class="{ 'is-invalid': errors.barcode }">
+										<label for="example-text-input" class="form-control-label">PRODUCTO_NOMBRE</label>
+										<input required v-model="PRODUCTO_NOMBRE" value="<?= $bebida['PRODUCTO_NOMBRE']; ?>" class="form-control" name="PRODUCTO_NOMBRE" type="text" placeholder="Nombre del producto" :class="{ 'is-invalid': errors.barcode }" n>
 										<div class="invalid-feedback">{{ errors.barcode }}</div>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="exampleFormControlSelect1">Categoría</label>
-										<div>
-											<button class="btn btn-icon btn-3 bg-gradient-default" type="button" data-bs-toggle="dropdown">
-												<span class="btn-inner-icon"><i class="fa-solid fa-box-archive"></i></span>
-												<span class="btn-inner-text ms-2">{{ category.name }}</span>
-											</button>
-											<ul class="dropdown-menu px-2 py-3 mt-n5" aria-labelledby="dropdownMenuButton">
-												<input class="form-control" placeholder="Buscar..." v-model="search">
-												<h5 class="mt-2 mb-2 ms-2">Categorias</h5>
-												<li v-for="(item, index) in searchCategories()"><a class="dropdown-item border-radius-md" @click="category.id = item.id, category.name = item.name">{{ item.name }}</a></li>
-											</ul>
+								<div class="col-md-4">
+									<label for="example-text-input" class="form-control-label">ID_CATEGORIA</label>
+									<input required v-model="ID_CATEGORIA" class="form-control" value="<?= $bebida['ID_CATEGORIA']; ?>" name="ID_CATEGORIA" type="text" placeholder="Nombre del producto" :class="{ 'is-invalid': errors.barcode }" n>
+									<div class="invalid-feedback">{{ errors.barcode }}</div>
+
+								</div>
+
+								<div class="col-md-4">
+									<label for="example-text-input" class="form-control-label">ID_SUBCATEGORIA</label>
+									<input required v-model="ID_SUBCAT" class="form-control" value="<?= $bebida['ID_SUBCAT']; ?>" name="ID_SUBCAT" type="text" placeholder="Nombre del producto" :class="{ 'is-invalid': errors.barcode }" n>
+									</div>
+
+
+									<div class="col-md-12">
+										<div class="form-group">
+											<label required for="exampleFormControlTextarea1">DESCRIPCION</label>
+											<textarea name="descripcion" value="<?= $bebida['descripcion']; ?>" v-model="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Descripción del producto"><?= $bebida['descripcion']; ?></textarea>
+											<div class="invalid-feedback">{{ errors.description }}</div>
 										</div>
-										<input class="d-none" :class="{ 'is-invalid': errors.category }">
-										<div class="invalid-feedback">{{ errors.category }}</div>
 									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<label for="example-text-input" class="form-control-label">Nombre</label>
-										<input v-model="name" class="form-control" type="text" placeholder="Nombre del producto" :class="{ 'is-invalid': errors.name }">
-										<div class="invalid-feedback">{{ errors.name }}</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="example-text-input" class="form-control-label">PRECIO_UNITARIO</label>
+											<input required v-model="PRECIO_UNITARIO" value="<?= $bebida['PRECIO_UNITARIO']; ?>" class="form-control" name="PRECIO_UNITARIO" type="number" placeholder="Precio unitario" :class="{ 'is-invalid': errors.barcode }" n>
+											<div class="invalid-feedback">{{ errors.barcode }}</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<label for="exampleFormControlTextarea1">Descripción</label>
-										<textarea v-model="description" class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Descripción del producto" :class="{ 'is-invalid': errors.description }"></textarea>
-										<div class="invalid-feedback">{{ errors.description }}</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="example-text-input" class="form-control-label">STOCK</label>
+											<input required v-model="barcode" value="<?= $bebida['STOCK']; ?>" class="form-control" name="STOCK" type="number" placeholder="Stock del producto" :class="{ 'is-invalid': errors.barcode }" n>
+											<div class="invalid-feedback">{{ errors.barcode }}</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="button-row d-flex mt-4">
-										<button class="btn bg-gradient-success ms-auto mb-0"  @click.prevent="updateProduct">Guardar</button>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="example-text-input" class="form-control-label">ESTADO</label>
+											<input required v-model="barcode" value="<?= $bebida['ESTADO']; ?>" class="form-control" name="ESTADO" type="number" placeholder="Stock del producto" :class="{ 'is-invalid': errors.barcode }" n>
+											<div class="invalid-feedback">{{ errors.barcode }}</div>
+										</div>
+									</div>
+							
+									<div class="col-md-12">
+										<div class="button-row d-flex mt-4">
+											<button class="btn bg-gradient-success ms-auto mb-0" type="submit">Guardar</button>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</form>
+				
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -111,14 +122,15 @@
 					<div class="card-body pt-0">
 						<div class="text-center mt-4">
 							<div class="file">
-								<input type="file" id="fileProduct" @change="readFile">
+								<input required name="foto" value="<?= $bebida['foto']; ?>" type="file" id="fileProduct" @change="readFile">
 								<label for="fileProduct">Cambiar...</label>
 							</div>
 							<div class="content-file">
-								<img :src="preview">
+								<img : src="<?= base_url() ?>/public/uploads/<?= $bebida['foto']; ?>">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			</form>
 		</div>
