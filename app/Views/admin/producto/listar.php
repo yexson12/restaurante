@@ -70,7 +70,11 @@
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">DESCRIPCION</th>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">PRECIO</th>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">STOCK</th>
-                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">idcategoria</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">categoria</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2"> sub categoria</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">estado</th>
+                                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2">ACCIONES</th>
+                                     
                                         <th class="text-secondary opacity-7"></th>
                                     </tr>
                                 </thead>
@@ -83,7 +87,9 @@
                                             <td><span class="text-xs font-weight-bold"><?= $bebida['descripcion']; ?></span></td>
                                             <td><span class="text-xs font-weight-bold"><?= $bebida['PRECIO_UNITARIO']; ?></span></td>
                                             <td><span class="text-xs font-weight-bold"><?= $bebida['STOCK']; ?></span></td>
-                                            <td><span class="text-xs font-weight-bold"><?= $bebida['ID_CATEGORIA']; ?></span></td>
+                                            <td><span class="text-xs font-weight-bold"><?= $bebida['NOMBRE_CATEGORIA']; ?></span></td>
+                                            <td><span class="text-xs font-weight-bold"><?= $bebida['NOMBRE_SUBCAT']; ?></span></td>
+                                            <td><span class="text-xs font-weight-bold"><?= $bebida['ESTADO']; ?></span></td>
 
                                             <td class="text-lg pe-5">
                                                 <span type="button" id="options" data-bs-toggle="dropdown"><i class="fa-solid fa-list"></i></span>

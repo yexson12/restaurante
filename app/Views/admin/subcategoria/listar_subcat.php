@@ -81,7 +81,7 @@
                                         <tr>
 
                                             <td><span class="text-xs font-weight-bold"><?= $subcategorias['ID_SUBCAT']; ?></span></td>
-                                            <td><span class="text-xs font-weight-bold"><?= $subcategorias['ID_CATEGORIA']; ?></span></td>
+                                            <td><span class="text-xs font-weight-bold"><?= $subcategorias['NOMBRE_CATEGORIA']; ?></span></td>
                                             <td><span class="text-xs font-weight-bold"><?= $subcategorias['NOMBRE_SUBCAT']; ?></span></td>
 
                                             <td class="text-lg pe-5">

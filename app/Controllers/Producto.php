@@ -37,7 +37,7 @@ class Producto extends BaseController
             exit();
         }
         $bedida = new Bebida();
-        $datos['producto'] = $bedida->where('estado', 1)->findAll();
+        $datos['producto'] = $bedida->join('categoria','categoria.ID_CATEGORIA=producto.ID_CATEGORIA')->join('subcategoria','subcategoria.ID_SUBCAT=producto.ID_SUBCAT')->orderBy('PRODUCTO_ID', 'DESC')->where('estado', 1)->findAll();
         echo view('admin/template/headadmin');
         echo view('admin/producto/listar', $datos);
         echo view('admin/template/footadmin');

@@ -17,7 +17,7 @@ class Subcategorias extends Controller
      */
     protected $request;
 
-    public function admin_subcat()
+    public function admin_subcate()
     {
         session_start();
         if (!isset($_SESSION['usuario'])) {
@@ -32,6 +32,29 @@ class Subcategorias extends Controller
 
         $subcategorias = new Subcategoria();
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'DESC')->findAll();
+        echo view('admin/template/headadmin');
+
+        echo view('admin/subcategoria/listar_subcat', $datos);
+        echo view('admin/template/footadmin');
+    }
+
+
+
+    public function admin_subcat()
+    {
+        session_start();
+        if (!isset($_SESSION['usuario'])) {
+            echo '
+        <script>
+        window.location =  "../index.php";
+        </script>';
+            session_destroy();
+            exit();
+        }
+
+        $categorias = new categoria();
+        $subcategorias = new Subcategoria();
+        $datos['subcategoria'] = $subcategorias->join('categoria','categoria.ID_CATEGORIA=subcategoria.ID_CATEGORIA')->orderBy('ID_SUBCAT', 'DESC')->findAll();
         echo view('admin/template/headadmin');
 
         echo view('admin/subcategoria/listar_subcat', $datos);
