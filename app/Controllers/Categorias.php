@@ -40,6 +40,15 @@ class Categorias extends Controller{
         echo view('admin/template/footadmin');
     }
 
+    public function prueba()
+    {
+       
+        echo view('admin/template/headadmin');
+        echo view('admin/prueba');
+  
+        echo view('admin/template/footadmin');
+    }
+
     
     public function guardar_cat()
     {

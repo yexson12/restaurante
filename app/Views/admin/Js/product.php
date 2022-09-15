@@ -19,7 +19,7 @@
 					const form = new FormData();
 					form.append('productfile', file);
 
-					if(file.type.includes('image')){
+					if(file.type.includes('foto')){
 						this.uploadFile(URL.createObjectURL(file), form);
 					} else {
 						this.uploadFile("<?= base_url('public/assets/img/illustrations/icon-documentation.svg');?>", form);

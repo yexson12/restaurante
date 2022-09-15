@@ -64,6 +64,7 @@ $routes->get('admin_cat/', 'Categorias::admin_cat');
 $routes->get('admin_general', 'Producto::admin_general');
 
 $routes->get('crear_cat/', 'Categorias::crear_cat');
+$routes->get('prueba', 'Categorias::prueba');
 $routes->get('borrar_cat/(:num)', 'Categorias::borrar_cat/$1');
 $routes->get('editar_cat/(:num)', 'Categorias::editar_cat/$1');
 $routes->post('guardar_cat', 'Categorias::guardar_cat');

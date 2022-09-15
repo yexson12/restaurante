@@ -1,3 +1,6 @@
+
+
+
 <main class="main-content position-relative border-radius-lg" id="product">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" data-scroll="false">
@@ -5,9 +8,9 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white">Paginas</a></li>
-                    <li class="breadcrumb-item text-sm text-white active" aria-current="page">Producto</li>
+                    <li class="breadcrumb-item text-sm text-white active" aria-current="page">subcategoria</li>
                 </ol>
-                <h6 class="font-weight-bolder text-white mb-0">Producto</h6>
+                <h6 class="font-weight-bolder text-white mb-0">subcategoria</h6>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4">
                 <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -49,26 +52,35 @@
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
-                            <p class="mb-0">Nuevo producto</p>
-                            <a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('admin_pro'); ?>">Volver</a>
+                            <p class="mb-0">Actualizar subcategoria</p>
+                            <a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('admin_subcat'); ?>">Volver</a>
                         </div>
                     </div>
-                    <form  action="<?= site_url('/guardar_pro') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= site_url('/actualizar_subcat') ?>" method="post" enctype="multipart/form-data">
+                        <input type="text" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT']; ?>">
+                        <input type="text" name="ID_CATEGORIA" value="<?= $subcategoria['ID_CATEGORIA']; ?>">
+						
+
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">PRODUCTO_NOMBRE</label>
-                                        <input required v-model="PRODUCTO_NOMBRE" class="form-control" name="PRODUCTO_NOMBRE" type="text" placeholder="Nombre del producto" :class="{ 'is-invalid': errors.barcode }" n>
-                                        <div class="invalid-feedback">{{ errors.barcode }}</div>
+                                        <label for="example-text-input" class="form-control-label">NOMBRE SUBCATEGORIA</label>
+                                        <input required v-model="NOMBRE_SUBCAT" value="<?= $subcategoria['NOMBRE_SUBCAT']; ?>" class="form-control" name="NOMBRE_SUBCAT" type="text" placeholder="Nombre la categoria" :class="{ 'is-invalid': errors.barcode }" n>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">NOMBRE SUBCATEGORIA</label>
+                                        <input  v-model="NOMBRE_SUBCAT" value="<?= $subcategoria['ID_CATEGORIA']; ?>" class="form-control" name="NOMBRE_SUBCAT" type="text" placeholder="Nombre la categoria" :class="{ 'is-invalid': errors.barcode }" n>
+
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Categoría</label>
-                                        <label for="ID_CATEGORIA">CATEGORIA</label>
-
-
+                                        
                                         <select type="hidden" required class="form-control" name="ID_CATEGORIA" id="ID_CATEGORIA">
                                             <option value="0">Selecciona una opcion</option>
                                             <?php foreach ($categoria as $categorias) : ?>
@@ -80,42 +92,12 @@
                                         <br>
                                     </div>
                                 </div>
-                         
-                                <div class="col-md-4">
-                                <div id="select2lista"></div>
-                         
-                                </div>
+                                
+                                
 
                                 <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label required for="exampleFormControlTextarea1">DESCRIPCION</label>
-                                        <textarea name="descripcion" v-model="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Descripción del producto" :class="{ 'is-invalid': errors.description }"></textarea>
-                                        <div class="invalid-feedback">{{ errors.description }}</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">PRECIO_UNITARIO</label>
-                                        <input required v-model="PRECIO_UNITARIO" class="form-control" name="PRECIO_UNITARIO" type="number" placeholder="Precio unitario" :class="{ 'is-invalid': errors.barcode }" n>
-                                        <div class="invalid-feedback">{{ errors.barcode }}</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">STOCK</label>
-                                        <input required v-model="barcode" class="form-control" name="STOCK" type="number" placeholder="Stock del producto" :class="{ 'is-invalid': errors.barcode }" n>
-                                        <div class="invalid-feedback">{{ errors.barcode }}</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="foto">imagen</label>
-                                        <input required id="foto" class="form-control-file" type="file" name="foto">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
                                     <div class="button-row d-flex mt-4">
-                                        <button class="btn bg-gradient-success ms-auto mb-0" type="submit">Guardar</button>
+                                        <button class="btn bg-gradient-success ms-auto mb-0" type="submit">ACTUALIZAR</button>
                                     </div>
                                 </div>
                             </div>
@@ -123,20 +105,5 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-4">
-				<div class="card">
-					<div class="card-body pt-0">
-						<div class="text-center mt-4">
-							<div class="file">
-								<input type="file" id="fileProduct" @change="readFile">
-								<label for="fileProduct">Buscar...</label>
-							</div>
-							<div class="content-file">
-								<img :src="preview">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            </form>
+
         </div>

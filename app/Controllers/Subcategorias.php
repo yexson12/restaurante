@@ -31,7 +31,7 @@ class Subcategorias extends Controller
 
 
         $subcategorias = new Subcategoria();
-        $datos['subcategoria'] = $subcategorias->findAll();
+        $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'DESC')->findAll();
         echo view('admin/template/headadmin');
 
         echo view('admin/subcategoria/listar_subcat', $datos);
@@ -66,11 +66,13 @@ class Subcategorias extends Controller
     }
 
     public function editar_subcat($id = null)
-    {
+    {        $categorias = new categoria();
 
-
+  
+        $datos['categoria'] = $categorias->findAll();
         $subcategorias = new subcategoria();
-        $datos['subcategoria'] = $subcategorias->where('ID_SUBCAT', $id)->first();
+        $datos['subcategoria'] = $subcategorias->where('subcategoria.ID_SUBCAT', $id)->first();
+
 
         echo view('admin/template/headadmin');
         echo view('admin/subcategoria/editar_subcat', $datos);
@@ -79,18 +81,15 @@ class Subcategorias extends Controller
 
     public function actualizar_subcat()
     {
-        $subcategorias = new subcategoria();
-
+        $subcategorias = new Subcategoria();
 
         $datos = [
             'ID_CATEGORIA' => $this->request->getVar('ID_CATEGORIA'),
             'NOMBRE_SUBCAT' => $this->request->getVar('NOMBRE_SUBCAT')
-
         ];
 
         $id = $this->request->getVar('ID_SUBCAT');
-        $subcategorias->update($id, $datos);
-
+        $subcategorias->update($id,$datos);
         return $this->response->redirect((site_url('/admin_subcat')));
     }
 

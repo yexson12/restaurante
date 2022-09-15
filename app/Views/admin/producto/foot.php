@@ -11,8 +11,31 @@
 <script src="<?= base_url('/public/assets/js/plugins/axios.min.js'); ?>"></script>
 
 <!-- jQuery UI -->
+    
+	
+	<script>
+		<?php if(session("success")):?>
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Success',
+			text: '<?= session("success");?>',
+			showConfirmButton: false,
+			timer: 3000
+		})
+		<?php endif;?>
 
-
+		<?php if(session("error")):?>
+		Swal.fire({
+			position: 'top-end',
+			icon: 'error',
+			title: 'Oops...',
+			text: '<?= session("error") ?>',
+			showConfirmButton: false,
+			timer: 3000
+		})
+		<?php endif; ?>
+	</script>
 
 </body>
 

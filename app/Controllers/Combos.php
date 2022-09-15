@@ -36,16 +36,15 @@ class Combos extends Controller
         
             $result=mysqli_query($conexion,$sql);
         
-            $cadena="<label>CATEGORIA</label>
-            <div class='form-group'>
-                    <select type='hidden' class='form-control' id='ID_SUBCAT' name='ID_SUBCAT'>
+            $cadena="
+                    <select class='form-control' id='ID_SUBCAT' name='ID_SUBCAT'>
                     ";
         
             while ($ver=mysqli_fetch_row($result)) {
                 $cadena=$cadena.'<option value='.$ver[0].'>'.utf8_encode($ver[2]).'</option>';
             }
         
-            echo  $cadena."</select>  </div>";
+            echo  $cadena."</select>";
         
         
     }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+    />
+    <!-- Nucleo Icons -->
+    <link
+      href="<?= base_url('/public/assets/css/nucleo-icons.css'); ?>"
+      rel="stylesheet"
+    />
+    <link
+      href="<?= base_url('/public/assets/css/fontawesome.css'); ?>"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="<?= base_url('/public/assets/css/argon-dashboard.css'); ?>"
+      rel="stylesheet"
+    />
+    <link
+      id="pagestyle"
+      href="<?= base_url('/public/assets/css/style.css'); ?>"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      rel="stylesheet"
+      href="<?= base_url() ?>/public/atlantis/assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?= base_url() ?>/public/atlantis/assets/css/atlantis.css"
+    />
+    <!-- PARTE YEXSON  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #divocultamuestra {
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        background: orange;
+        z-index: 1;
+      }
+      #divocultamuestras {
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        background: green;
+        z-index: 2;
+      }
+    </style>
+    <div class="container">
+   
+     
+      <input
+        type="button"
+        id="botonocultamuestra"
+        value="Mostrar div"
+        style="font-size: 14px; cursor: pointer; margin: 15px; padding: 5px"
+      />
+
+      <div class="col-md-4">
+        
+        <input  id="divocultamuestra" value="hola como estas"/>
+      </div>
+
+      <select
+        style="display: none"
+        id="divocultamuestras"
+        class="form-control"
+        name="filtroColor"
+        id="filtros3"
+      >
+        <option value="">Selecciona un color</option>
+        <option value="1">Blanco</option>
+        <option value="2">Negro</option>
+        <option value="3">Gris</option>
+        <option value="4">Rojo</option>
+        <option value="5">Amarillo</option>
+      </select>
+    </div>
+    <script src="<?= base_url() ?>/public/atlantis/assets/js/core/jquery.3.2.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#botonocultamuestra").click(function () {
+          $("#divocultamuestra").each(function () {
+            displaying = $(this).css("display");
+            if (displaying == "block") {
+              $(this).fadeOut("slow", function () {
+                $(this).css("display", "none");
+              });
+            } else {
+              $(this).fadeIn("slow", function () {
+                $(this).css("display", "block");
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#botonocultamuestra").click(function () {
+          $("#divocultamuestras").each(function () {
+            displaying = $(this).css("display");
+            if (displaying == "block") {
+              $(this).fadeOut("slow", function () {
+                $(this).css("display", "none");
+              });
+            } else {
+              $(this).fadeIn("slow", function () {
+                $(this).css("display", "block");
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

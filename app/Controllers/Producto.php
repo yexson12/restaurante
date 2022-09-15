@@ -71,7 +71,7 @@ class Producto extends BaseController
         echo view('admin/template/headadmin');
         echo view('admin/producto/crear', $datos);
         echo view('admin/producto/foot');
-        echo view('admin/js/product');
+    
     }
 
     public function guardar_pro()
@@ -119,14 +119,41 @@ class Producto extends BaseController
 
 
 
-    public function editar_pro($id = null)
+    public function editar_pr($id = null)
     {
-
-
-
+        $categorias = new categoria();
+        $subcategorias = new subcategoria();
+        $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
+        $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'ASC')->findAll();
+        $conexion = mysqli_connect('localhost', 'root', '1234', 'bd_restaurante');
+        $sql = "CALL splistarproducto";
+        $result = mysqli_query($conexion, $sql);
+        $ver = mysqli_fetch_row($result);
+        $ver['0']=$id;
 
         $bebida = new Bebida();
+        $datos['ver'] = $ver ;
+ 
         $datos['bebida'] = $bebida->where('PRODUCTO_ID', $id)->first();
+    
+        echo view('admin/producto/editar', $datos);
+        echo view('admin/template/footadmin');
+    }
+
+    
+    public function editar_pro($id = null)
+    {
+        $categorias = new categoria();
+        $subcategorias = new subcategoria();
+        $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
+        $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'ASC')->findAll();
+      
+        $bebida = new Bebida();
+        $datos['bebida'] = $bebida->where('producto.PRODUCTO_ID', $id)->first();
+
+
+
+
         echo view('admin/template/headadmin');
         echo view('admin/producto/editar', $datos);
         echo view('admin/template/footadmin');
