@@ -156,8 +156,12 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for="example-text-input" class="form-control-label">ESTADO</label>
-											<input required v-model="barcode" value="<?= $bebida['ESTADO']; ?>" class="form-control" name="ESTADO" type="number" placeholder="Stock del producto" :class="{ 'is-invalid': errors.barcode }" n>
-											<div class="invalid-feedback">{{ errors.barcode }}</div>
+											<br>
+											<?php if ($bebida['ESTADO'] == 0) : ?>
+												      <a    class="btn bg-gradient-danger" type="button" disabled="false" >DESACTIVADO</a>
+                                                <?php else : ?>
+                                                 	<a disabled style="pointer-events:none;" title="EL PRODUCTO ESTA ACTIVADO" class="btn bg-gradient-success ms-auto mb-0" type="submit">ACTIVADO</a>
+                                                <?php endif; ?>
 										</div>
 									</div>
 

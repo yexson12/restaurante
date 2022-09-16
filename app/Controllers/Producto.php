@@ -37,7 +37,7 @@ class Producto extends BaseController
             exit();
         }
         $bedida = new Bebida();
-        $datos['producto'] = $bedida->join('categoria','categoria.ID_CATEGORIA=producto.ID_CATEGORIA')->join('subcategoria','subcategoria.ID_SUBCAT=producto.ID_SUBCAT')->orderBy('PRODUCTO_ID', 'DESC')->where('estado', 1)->findAll();
+        $datos['producto'] = $bedida->join('categoria','categoria.ID_CATEGORIA=producto.ID_CATEGORIA')->join('subcategoria','subcategoria.ID_SUBCAT=producto.ID_SUBCAT')->orderBy('PRODUCTO_ID', 'DESC')->findAll();
         echo view('admin/template/headadmin');
         echo view('admin/producto/listar', $datos);
         echo view('admin/template/footadmin');
@@ -239,4 +239,26 @@ class Producto extends BaseController
 			echo json_encode($response);
 		}
 	}
+
+
+    
+    public function actualizar_estado()
+    {
+        $bedida = new Bebida();
+
+
+        $datos = [
+            'ESTADO'  => $this->request->getVar('ESTADO')
+
+        ];
+
+        $id = $this->request->getVar('PRODUCTO_ID');
+        $bedida->update($id, $datos);
+       
+        return $this->response->redirect((site_url('/admin_pro')));
+    }
+
+
+
+
 }

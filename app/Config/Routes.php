@@ -58,7 +58,10 @@ $routes->post('combos', 'Producto::combos');
 $routes->get('entrarcombo', 'Combos::entrarcombo');
 $routes->post('combo', 'Combos::combo');
 $routes->post('combo_subcategoria', 'Combos::combo_subcategoria');
-       
+$routes->post('actualizar_estado', 'Producto::actualizar_estado');     
+
+
+
 /*ADMINISTRADOR CATEGORIA*/
 $routes->get('admin_cat/', 'Categorias::admin_cat');
 

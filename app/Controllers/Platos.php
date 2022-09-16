@@ -8,7 +8,7 @@ class Platos extends BaseController
 {
     public function index()
     {      $bedida = new Bebida();
-        $datos['producto'] = $bedida->where("ID_CATEGORIA",3)->orderBy('PRODUCTO_ID', 'ASC')->findAll();
+        $datos['producto'] = $bedida->where("ID_CATEGORIA",3)->where( "ESTADO",1)->orderBy('PRODUCTO_ID', 'ASC')->findAll();
 
         $subcategorias = new Subcategoria();
         $datos['subcategoria'] = $subcategorias->where("ID_CATEGORIA",3)->orderBy('ID_SUBCAT', 'ASC')->findAll();
