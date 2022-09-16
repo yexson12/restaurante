@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <!-- Detalles Platillo -->
-                <div class="messages-wrapper" data-indexitem="">
+                <div class="messages-wrapper w-100" data-indexitem="">
                     <div class="messages-title d-flex flex-reverse align-items-center">
                         <button class="return">
                             <i class="flaticon-left-arrow-3"></i>
@@ -38,7 +38,7 @@
                             <span id="qsb-details-name" class="h2">null</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-fluid">
                         <div class="row-md-4">
                             <div class="card card-post card-round">
                                 <img class="card-img-top" src="<?= base_url() ?>/public/atlantis/assets/img/proyecto/chadengle.jpg"
@@ -104,7 +104,7 @@
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/input-spinner/input-spinner.js"></script>
 <script src="<?= base_url() ?>/public/atlantis/assets/js/restaurante/app/sidebar-orden.js"></script>
 <script src="<?= base_url() ?>/public/atlantis/assets/js/restaurante/app/particion.js"></script>
-
+<script src="<?= base_url() ?>/public/atlantis/assets/js/restaurante/app/menu.js"></script>
 
 <!-- jQuery UI -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
@@ -115,9 +115,6 @@
 
 <!-- Moment JS -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/moment/moment.min.js"></script>
-
-<!-- Chart JS -->
-<script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/chart.js/chart.min.js"></script>
 
 <!-- jQuery Sparkline -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
@@ -134,12 +131,6 @@
 <!-- Bootstrap Toggle -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 
-<!-- jQuery Vector Maps -->
-<script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-<script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
-
-<!-- Google Maps Plugin -->
-<script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/gmaps/gmaps.js"></script>
 
 <!-- Dropzone -->
 <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/dropzone/dropzone.min.js"></script>
@@ -188,7 +179,7 @@
 <!-- nice select -->
 <!-- FIN PARTE YEXSON  -->
 
-<script src="<?= base_url() ?>/public/atlantis/assets/js/restaurante/app/menu.js"></script>
+
 
 
 </body>
