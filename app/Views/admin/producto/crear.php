@@ -82,6 +82,7 @@
                                 </div>
                          
                                 <div class="col-md-4">
+                                <label for="exampleFormControlSelect1">SUBCATEGORIA</label>
                                 <div id="select2lista"></div>
                          
                                 </div>

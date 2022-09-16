@@ -59,9 +59,12 @@
                             </div>
                         </div>
                     </div>
+                        <!-- End Navbar -->
                     <div class="card-body px-0 pb-0">
                         <div class="table-responsive">
+                                <!-- End Navbar -->
                             <table class="table align-items-center mb-0" id="data-list">
+                                    <!-- End Navbar -->
                                 <thead>
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7"> ID_CATEGORIA</th>

@@ -48,6 +48,29 @@ class Combos extends Controller
         
         
     }
+    
+    public function combo_subcategoria()
+    { 
+        $conexion=mysqli_connect('localhost','root','1234','bd_restaurante');
+        $continente=$_POST['continente'];
+        
+            $sql="SELECT * FROM subcategoria where ID_CATEGORIA='$continente'";
+        
+            $result=mysqli_query($conexion,$sql);
+        
+            $cadena="
+                    <select class='form-control' id='ID_SUBCAT' name='ID_SUBCAT'>
+                    ";
+        
+            while ($ver=mysqli_fetch_row($result)) {
+                $cadena=$cadena.'<option value='.$ver[0].'>'.utf8_encode($ver[2]).'</option>';
+            }
+        
+            echo  $cadena."</select>";
+        
+        
+    }
+
 
 
 

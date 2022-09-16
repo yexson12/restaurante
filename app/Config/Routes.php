@@ -57,6 +57,7 @@ $routes->post('actualizar_pro', 'Producto::actualizar_pro');
 $routes->post('combos', 'Producto::combos');
 $routes->get('entrarcombo', 'Combos::entrarcombo');
 $routes->post('combo', 'Combos::combo');
+$routes->post('combo_subcategoria', 'Combos::combo_subcategoria');
        
 /*ADMINISTRADOR CATEGORIA*/
 $routes->get('admin_cat/', 'Categorias::admin_cat');

@@ -53,7 +53,7 @@
                             <a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('admin_cat'); ?>">Volver</a>
                         </div>
                     </div>
-                    <form  action="<?= site_url('/actualizar_cat') ?>" method="post" enctype="multipart/form-data">
+                    <form  action="<?=site_url('/actualizar_cat') ?>" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="ID_CATEGORIA" value="<?= $categoria['ID_CATEGORIA'];?>">
                     
                     <div class="card-body">
