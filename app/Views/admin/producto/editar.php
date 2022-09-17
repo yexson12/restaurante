@@ -60,9 +60,9 @@
 				
 							<div class="card-body">
 
-								<input type="text" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
-								<input type="text" name="ID_CATEGORIA" value="<?= $bebida['ID_CATEGORIA']; ?>">
-								<input type="text" name="ID_SUBCAT" value="<?= $bebida['ID_SUBCAT']; ?>">
+								<input type="hidden" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
+								<input type="hidden" name="ID_CATEGORIA" value="<?= $bebida['ID_CATEGORIA']; ?>">
+								<input type="hidden" name="ID_SUBCAT" value="<?= $bebida['ID_SUBCAT']; ?>">
 
 								<div class="row">
 									<div class="col-md-10">

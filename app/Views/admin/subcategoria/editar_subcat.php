@@ -49,12 +49,12 @@
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
-                            <p class="mb-0">Nueva subcategoria</p>
+                            <p class="mb-0">Editar subcategoria</p>
                             <a class="btn bg-gradient-primary btn-sm ms-auto" href="<?= base_url('admin_subcat'); ?>">Volver</a>
                         </div>
                     </div>
                     <form  action="<?= site_url('/actualizar_subcat') ?>" method="post" enctype="multipart/form-data">
-                    <input type="text" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT']; ?>">
+                    <input type="hidden" name="ID_SUBCAT" value="<?= $subcategoria['ID_SUBCAT']; ?>">
 
                         <div class="card-body">
                             <div class="row">
@@ -89,7 +89,7 @@
                                 
                                 <div class="col-md-12">
                                     <div class="button-row d-flex mt-4">
-                                        <button class="btn bg-gradient-success ms-auto mb-0" type="submit">Guardar</button>
+                                        <button class="btn bg-gradient-success ms-auto mb-0" type="submit">Actualizar</button>
                                     </div>
                                 </div>
                             </div>

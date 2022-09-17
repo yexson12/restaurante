@@ -5,15 +5,28 @@ use CodeIgniter\Controller;
 
 class LoginController extends Controller{
     public function login()
+
     {
-        echo view('Login/header');
-        echo view('Login/login');
-        echo view('Login/footer');
+
+        session_start();
+
+if(!isset($_SESSION['usuario'])){
+    echo view('Login/header');
+    echo view('Login/login');
+    echo view('Login/footer');
+    session_destroy();
+    exit();
+}else{
+
+    return $this->response->redirect((site_url('/admin_general')));
+
+}
+        
     }
 
     public function ingresar()
     {   session_start();
-        $conexion = mysqli_connect("localhost","root","","bd_restaurante");
+        $conexion = mysqli_connect("localhost","root","1234","bd_restaurante");
 
         $correo = $_POST['correo'];
         $contrasena = $_POST['contrasena'];

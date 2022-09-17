@@ -98,7 +98,7 @@ class Subcategorias extends Controller
 
 
         echo view('admin/template/headadmin');
-        echo view('admin/subcategoria/prueba', $datos);
+        echo view('admin/subcategoria/editar_subcat', $datos);
         echo view('admin/template/footadmin');
     }
 
