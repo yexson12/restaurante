@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png'); ?>">
-    <title>Sistema Ventas CI2</title>
+    <link rel="icon" type="image/png" href="<?= base_url('/public/assets/img/icon/icon.ico'); ?>">
+    <title>New Start</title>
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
@@ -21,8 +21,8 @@
         <div class="sidenav-scrollbar">
             <div class="sidenav-header">
                 <a class="navbar-brand m-0" href="<?= base_url('dashboard'); ?>">
-                    <img src="<?= base_url('/public/assets/img/logo-ct-dark.svg'); ?>" class="navbar-brand-img h-100">
-                    <span class="ms-1 font-weight-bold">Sistema Ventas CI2</span>
+                    <img src="<?= base_url('/public/assets/img/icon/icon.png'); ?>" class="navbar-brand-img h-100">
+                    <span class="ms-1 font-weight-bold">Administrador</span>
                 </a>
             </div>
             <hr class="horizontal dark mt-0">
@@ -93,7 +93,7 @@
             </div>
             <div class="sidenav-footer mx-3 ">
                 <div class="card card-plain shadow-none" id="sidenavCard">
-                    <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/illustrations/icon-documentation.svg'); ?>">
+                    <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/icon/icon.png'); ?>">
                     <div class="card-body text-center p-3 w-100 pt-0">
                         <div class="docs-info">
                             <h6 class="mb-0">NEW START</h6>

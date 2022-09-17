@@ -33,7 +33,7 @@ class Subcategorias extends Controller
         $subcategorias = new Subcategoria();
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'DESC')->findAll();
         echo view('admin/template/headadmin');
-
+        echo view('admin/subcategoria/head');
         echo view('admin/subcategoria/listar_subcat', $datos);
         echo view('admin/template/footadmin');
     }
@@ -56,7 +56,7 @@ class Subcategorias extends Controller
         $subcategorias = new Subcategoria();
         $datos['subcategoria'] = $subcategorias->join('categoria','categoria.ID_CATEGORIA=subcategoria.ID_CATEGORIA')->orderBy('ID_SUBCAT', 'DESC')->findAll();
         echo view('admin/template/headadmin');
-
+        echo view('admin/subcategoria/head');
         echo view('admin/subcategoria/listar_subcat', $datos);
         echo view('admin/template/footadmin');
     }
@@ -67,6 +67,7 @@ class Subcategorias extends Controller
         $datos['categoria'] = $categorias->findAll();
 
         echo view('admin/template/headadmin');
+        echo view('admin/subcategoria/head');
         echo view('admin/subcategoria/crear_subcat',$datos);
         echo view('admin/template/footadmin');
     }
@@ -98,6 +99,7 @@ class Subcategorias extends Controller
 
 
         echo view('admin/template/headadmin');
+        echo view('admin/subcategoria/head');
         echo view('admin/subcategoria/editar_subcat', $datos);
         echo view('admin/template/footadmin');
     }
