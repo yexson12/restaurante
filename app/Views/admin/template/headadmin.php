@@ -96,12 +96,12 @@
                     <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/illustrations/icon-documentation.svg'); ?>">
                     <div class="card-body text-center p-3 w-100 pt-0">
                         <div class="docs-info">
-                            <h6 class="mb-0">Argon Dashboard</h6>
-                            <p class="text-xs font-weight-bold mb-0">Bootstrap 5 Admin Template</p>
+                            <h6 class="mb-0">NEW START</h6>
+                            <p class="text-xs font-weight-bold mb-0">Jovenes programadores</p>
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-dark btn-sm mb-0 w-100" href="https://www.creative-tim.com/product/argon-dashboard">Ver template</a>
+                <a class="btn btn-dark btn-sm mb-0 w-100" href="">Ver template</a>
             </div>
         </div>
     </aside>

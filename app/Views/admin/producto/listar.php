@@ -95,14 +95,14 @@
                                                     <form action="<?= site_url('/actualizar_estado') ?>" method="post" enctype="multipart/form-data">
                                                         <input type="hidden" name="ESTADO" value="1">
                                                         <input type="hidden" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
-                                                        <button class="btn bg-gradient-danger ms-auto mb-0" type="submit">ACTIVAR</button>
+                                                        <button style='width:120px; height:40px' class="btn bg-gradient-danger ms-auto mb-0" type="submit">ACTIVAR</button>
                                                     </form>
 
                                                 <?php else : ?>
                                                     <form action="<?= site_url('/actualizar_estado') ?>" method="post" enctype="multipart/form-data">
                                                         <input type="hidden" name="ESTADO" value="0">
                                                         <input type="hidden" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
-                                                        <button class="btn bg-gradient-success ms-auto mb-0" type="submit">DESACTIVAR</button>
+                                                        <button style='width:120px; height:40px' class="btn bg-gradient-success ms-auto mb-0" type="submit">DESACTIVAR</button>
 
                                                     </form>
 
