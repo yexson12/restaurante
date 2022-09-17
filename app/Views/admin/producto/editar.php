@@ -18,7 +18,7 @@
 								<input type="hidden" name="PRODUCTO_ID" value="<?= $bebida['PRODUCTO_ID']; ?>">
 								<input type="hidden" name="ID_CATEGORIA" value="<?= $bebida['ID_CATEGORIA']; ?>">
 								<input type="hidden" name="ID_SUBCAT" value="<?= $bebida['ID_SUBCAT']; ?>">
-								<input type="text" name="ESTADO" value="<?= $bebida['ESTADO']; ?>">
+								<input type="hidden" name="ESTADO" value="<?= $bebida['ESTADO']; ?>">
 
 								<div class="row">
 									<div class="col-md-10">
