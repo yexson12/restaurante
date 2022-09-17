@@ -33,15 +33,6 @@
                                     <i class="fa fa-check"></i>
                                 </button>
                             </div>
-
-                            <!-- <select class="form-control" id="cbo-personas">
-                                <option value="0">Seleccione la cantidad de personas</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select> -->
                         </div>
                     </div>
                 </div>
@@ -80,115 +71,13 @@
                         Asignados
                     </button>
                     <div id="list-platos-personas" class="accordion accordion-secondary">
-                        <!-- <div class="card lista-item-personas mb-2" style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" id="group-persona-1" data-toggle="collapse" data-target="#item-persona-1" aria-expanded="true" aria-controls="group-persona-1"
-                                role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 1
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/. 0.00</b></div>
-                            </div>
-                            <div id="item-persona-1" class="collapse" aria-labelledby="group-persona-1" data-parent="#accordion">
-                                <hr class="m-0 p-0">
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-link mt-1 mb-1" data-toggle="modal" data-target="#modal-agregar">
-                                        <span class="btn-label">
-                                            <i class="fa fa-plus"></i>
-                                        </span>
-                                        &nbsp;
-                                        Agregar
-                                    </button>
-                                </div>
-                                <div class="card-body pb-0" hidden>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card lista-item-personas mb-2" style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" id="item-persona2" data-toggle="collapse" data-target="#collapsePersona2" aria-expanded="true" aria-controls="collapsePersona2" role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 2
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/.
-                                        100.00</b></div>
-                            </div>
-                            <div id="collapsePersona2" class="collapse" aria-labelledby="item-persona2" data-parent="#accordion">
-                                <hr class="m-0 p-0">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <button class="btn btn-link mt-1 mb-1">
-                                            <span class="btn-label">
-                                                <i class="fa fa-plus"></i>
-                                            </span>
-                                            &nbsp;
-                                            Agregar
-                                        </button>
-                                        <button class="btn btn-link mt-1 mb-1" data-toggle="modal" data-target="#modal-editar">
-                                            <span class="btn-label">
-                                                <i class="fas fa-edit"></i>
-                                            </span>
-                                            &nbsp;
-                                            Editar
-                                        </button>
-                                    </div>
-                                    <button type="button" class="btn btn-icon btn-link mr-2">
-                                        <i class="fa fa-trash text-danger"></i>
-                                    </button>
-                                </div>
-                                <div class="card-body pb-0 pt-3">
-                                    <div class="d-flex">
-                                        <div class="flex-1 pt-1 ml-2">
-                                            <h6 class="fw-bold mb-1">CSSaaaaaa aaaaa aaa a aaaaaaaaaaa</h6>
-                                            <small class="text-muted">Cantidad: 4</small>
-                                        </div>
-                                        <div class="d-flex ml-auto align-items-center">
-                                            <h5 class="text-info fw-bold">S/. 107,00</h3>
-                                        </div>
-                                    </div>
-                                    <div class="separator-dashed"></div>
-                                    <div class="d-flex">
-                                        <div class="flex-1 pt-1 ml-2">
-                                            <h6 class="fw-bold mb-1">CSSaaaaaa aaaaa aaa a aaaaaaaaaaa</h6>
-                                            <small class="text-muted">Cantidad: 4</small>
-                                        </div>
-                                        <div class="d-flex ml-auto align-items-center">
-                                            <h5 class="text-info fw-bold">S/. 107,00</h5>
-                                        </div>
-                                    </div>
-                                    <div class="separator-dashed"></div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
                 <div class="tab-pane fade" id="pills-personalizado" role="tabpanel">
                     <div id="list-personalizado-personas" class="accordion accordion-secondary">
-                        <!-- <div class="card lista-item-personas mb-2"
-                            style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 1
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/.
-                                        100,00</b></div>
-                            </div>
-                        </div>
+
                         <div class="card lista-item-personas mb-2"
                             style="background: white !important; border-radius: 5px !important;">
                             <div class="card-header collapsed d-flex" role="button">
@@ -267,72 +156,7 @@
             </div>
             <div class="modal-body p-0">
                 <div id="mdl-asignados-container" class="accordion accordion-secondary">
-                    <!-- <div class="card lista-item-personas mb-0"
-                        style="background: white !important;">
-                        <div class="card-header collapsed d-flex" id="op1" data-toggle="collapse"
-                            data-target="#asignadosCollapse1" aria-expanded="true" aria-controls="asignadosCollapse1"
-                            role="button">
-                            <div class="d-flex flex-column">
-                                <h6 class="text-muted bold m-0 p-0">Plato</h6>
-                                <span class="text-secondary bold">Nombre del platillo largoooooaaao</span>
-                            </div>
-                            <span class="badge badge-secondary badge-pill">Max. 4</span>
-                        </div>
-                        <div id="asignadosCollapse1" class="collapse" aria-labelledby="op1"
-                            data-parent="#accordion">
-                            <div class="card-body pt-1 pb-1 bg-grey2">
-                                <div class="d-flex">
-                                    <div class="flex-1 pt-1 ml-2">
-                                        <h6 class="fw-bold mb-1">Persona 1</h6>
-                                    </div>
-                                    <div class="d-flex ml-auto align-items-center">
-                                        <small class="text-muted">Cantidad: <b>1</b></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="flex-1 pt-1 ml-2">
-                                        <h6 class="fw-bold mb-1">Persona 2</h6>
-                                    </div>
-                                    <div class="d-flex ml-auto align-items-center">
-                                        <small class="text-muted">Cantidad: <b>3</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card lista-item-personas mb-0"
-                        style="background: white !important;">
-                        <div class="card-header collapsed d-flex" id="op1" data-toggle="collapse"
-                            data-target="#asignadosCollapse2" aria-expanded="true" aria-controls="asignadosCollapse2"
-                            role="button">
-                            <div class="d-flex flex-column">
-                                <h6 class="text-muted bold m-0 p-0">Plato</h6>
-                                <span class="text-secondary bold">Nombre del platillo largoooooaaao</span>
-                            </div>
-                            <span class="badge badge-secondary badge-pill">Max. 3</span>
-                        </div>
-                        <div id="asignadosCollapse2" class="collapse" aria-labelledby="asignadosCollapse2Label"
-                            data-parent="#accordion">
-                            <div class="card-body pt-1 pb-1 bg-grey2">
-                                <div class="d-flex">
-                                    <div class="flex-1 pt-1 ml-2">
-                                        <h6 class="fw-bold mb-1">Persona 3</h6>
-                                    </div>
-                                    <div class="d-flex ml-auto align-items-center">
-                                        <small class="text-muted">Cantidad: <b>2</b></small>
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="flex-1 pt-1 ml-2">
-                                        <h6 class="fw-bold mb-1">Persona 4</h6>
-                                    </div>
-                                    <div class="d-flex ml-auto align-items-center">
-                                        <small class="text-muted">Cantidad: <b>1</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
         </div>
@@ -396,21 +220,7 @@
                 </button>
             </div>
             <div id="modal-editar-body"  class="modal-body p-0">
-                <!-- <div class="d-flex flex-column">
-                    <div class="card lista-item-personas mb-0 d-flex flex-column" style="background: white !important;">
-                        <div class="d-flex justify-content-between pb-0 pt-3 pl-3 pr-3">
-                            <span class="text-secondary bold">Nombre del platillo largoooooaaao</span>
-                            <button type="button" class="btn btn-icon btn-round btn-danger btn-xs">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </div>
-                        <div class="d-flex align-items-center form-group pt-0 pl-3">
-                            <button class="button-spinner" id="decrement" onclick="stepper(this,'spn-modal-editar-element-1')"> - </button>
-                            <input class="input-spinner" disabled="" type="number" min="1" max="100" step="1" value="1" id="spn-modal-editar-element-1" readonly="">
-                            <button class="button-spinner" id="increment" onclick="stepper(this, 'spn-modal-editar-element-1')"> + </button>
-                        </div>
-                    </div>
-                </div>         -->
+
             </div>
             <div class="modal-footer">
                 <button id="btn-modal-editar" data-idpersona="" type="button" class="btn btn-primary">Actualizar</button>

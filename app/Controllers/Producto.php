@@ -125,7 +125,7 @@ class Producto extends BaseController
         $subcategorias = new subcategoria();
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
         $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'ASC')->findAll();
-        $conexion = mysqli_connect('localhost', 'root', '1234', 'bd_restaurante');
+        $conexion = mysqli_connect('localhost', 'root', '', 'bd_restaurante');
         $sql = "CALL splistarproducto";
         $result = mysqli_query($conexion, $sql);
         $ver = mysqli_fetch_row($result);
