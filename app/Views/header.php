@@ -3,19 +3,19 @@ $servidor = "mysql:dbname=bd_restaurante;host=localhost";
 $usuario = "root";
 $password = "1234";
 
-        try {
-            $pdo = new PDO($servidor, $usuario, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8"));
-            // echo "conectado...";
-        } catch (PDOException $e) {
-            echo "Conexion mala.. " .$e->getMessage();
-        }
-        
-        $sentencia = $pdo->prepare("SELECT ID_CATEGORIA ,DES_CATEGORIA ,UCASE(NOMBRE_CATEGORIA) as NOMBRE_CATEGORIA   FROM categoria");
-        $sentencia->execute();
-        $listaEmpleados = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+try {
+    $pdo = new PDO($servidor, $usuario, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    // echo "conectado...";
+} catch (PDOException $e) {
+    echo "Conexion mala.. " . $e->getMessage();
+}
+
+$sentencia = $pdo->prepare("SELECT ID_CATEGORIA ,DES_CATEGORIA ,UCASE(NOMBRE_CATEGORIA) as NOMBRE_CATEGORIA   FROM categoria");
+$sentencia->execute();
+$listaEmpleados = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
-        /*$nav ="SELECT * FROM categoria limit 4";
+/*$nav ="SELECT * FROM categoria limit 4";
         $resultnav=mysqli_query($conexion,$nav);
 $row= mysqli_fetch_array($resultnav)*/
 
@@ -47,9 +47,9 @@ $row= mysqli_fetch_array($resultnav)*/
             }
         });
     </script>
-    
- 
-  
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -168,7 +168,34 @@ $row= mysqli_fetch_array($resultnav)*/
             </nav>
             <!-- End Navbar -->
         </div>
+        <style>
+                        .gatito .nav-item a {
+                            display: flex;
+                        
+             
+                          
+                            position: relative;
 
+                       
+                        }
+
+                        #miBoton {
+               
+                            background: light-gray;
+                        
+                        }
+
+                        #miBoton:hover {
+                 
+                            background: #1572E8;
+                            color: white;
+                        }
+
+                        #miBoton:active {
+                            background: gray;
+                            color: white;
+                        }
+                    </style>
         <!-- Sidebar -->
         <div class="sidebar sidebar-style-2">
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
@@ -196,17 +223,20 @@ $row= mysqli_fetch_array($resultnav)*/
                         </p>
 
                         <?php foreach ($listaEmpleados as $empleado) { ?>
-                        <li class="nav-item active">
-                            <a href="<?= base_url() ?>/<?php  echo $empleado['NOMBRE_CATEGORIA'];  ?>">
-                                <i class="fas fa-home"></i>
-                                <p><?php  echo $empleado['NOMBRE_CATEGORIA'];  ?></p>
-                            </a>
-                        </li>
+                            <li  class="nav-item ">
+                                <a id="miBoton" href="<?= base_url() ?>/<?php echo $empleado['NOMBRE_CATEGORIA'];  ?>">
+                                    <i class="fas fa-home"></i>
+                                    <p><?php echo $empleado['NOMBRE_CATEGORIA'];  ?></p>
+                                </a>
+                            </li>
 
 
                         <?php } ?>
 
                     </ul>
+
+                  
+                   
                 </div>
             </div>
         </div>
