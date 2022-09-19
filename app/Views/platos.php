@@ -1,29 +1,40 @@
+
+<?php             $nombre = "Aner";
+          $array = array(1, 2, 3, "casa", $nombre);?>
 <STyle>
   .CONTAINERHOLA {
-    border: 2px red solid;
+
 
   }
 
   .panel-header {
-    border: 2px greenyellow solid;
+
 
   }
 
   .page-inner {
-    border: 2px greenyellow solid;
 
+
+  }
+
+  .doo {
+  
   }
 </STyle>
 
 <div class="container CONTAINERHOLA">
 
-  <div class="panel-header" style="	background-image: linear-gradient(rgba(231, 197, 197, 0.507),rgba(61, 60, 60, 0.863)), url('<?= base_url() ?>/public/atlantis/assets/img/proyecto/como-prender-una-parrilla-1900Wx500H.jpg');
+  <div class="panel-header card-primary" style="	background-image: url('<?= base_url() ?>/public/atlantis/assets/img/categorias/menu.webp');
                  background-repeat: no-repeat; background-position: 50% 50%;
                  background-size:cover; ">
-    <div class="page-inner py-5">
-      <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+    <div class="page-inner py-5" doo>
+      <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row  ">
         <div>
-          <h2 class="text-white pb-2 fw-bold">PLATOS A LA CARTA</h2>
+
+     
+        <h2 class="text-white pb-2 fw-bold"><?= $categoria['DES_CATEGORIA']; ?></h2>
+        
+ 
           <h5 class="text-white op-7 mb-2">Las recetas de la tia May</h5>
         </div>
       </div>
@@ -39,7 +50,7 @@
       <ul class="filters_menu">
         <li class="active" data-filter="*">TODO</li>
         <?php foreach ($subcategoria as $subcategorias) : ?>
-
+          <input type="hidden" name="PRODUCTO_ID" value="<?= $subcategorias['ID_SUBCAT'];  ?>">
           <li data-filter=".<?= $subcategorias['ID_SUBCAT']; ?>"> <?= $subcategorias['NOMBRE_SUBCAT']; ?></li>
 
         <?php endforeach; ?>

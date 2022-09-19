@@ -44,6 +44,7 @@ $routes->get('CEVICHE/', 'Platos::index');
 $routes->get('menugeneral/', 'Menugeneral::index');
 $routes->get('PARRILLAS/', 'Parrillas::index');
 $routes->post('getInfoProducto','Menu::get_producto_by_index_AJAX');
+$routes->get('platogeneral/(:num)', 'Platos::platogeneral/$1');
 
 /*ADMINISTRADOR*/
 
