@@ -80,7 +80,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a style="background: #f5365c ;" class="nav-link" href="<?= base_url('/'); ?>">
+                        <a style="background: #EF9F9F ;" class="nav-link" href="<?= base_url('/'); ?>">
                             <div  class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="fas fa-angle-double-left text-dark text-sm opacity-10"></i>
                             </div>
