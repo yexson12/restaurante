@@ -224,7 +224,7 @@ $row= mysqli_fetch_array($resultnav)*/
                         </p>
                 
                         <?php foreach ($listaEmpleados as $empleado) { ?>
-                            <li  class="nav-item ">
+                            <li active  class="nav-item ">
                     
                                 <a id="miBoton"  href="<?= base_url() ?>/platogeneral/<?php echo $empleado['ID_CATEGORIA'];?>">
                                     <i class="fas fa-home"></i>
