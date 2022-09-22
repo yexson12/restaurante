@@ -13,7 +13,7 @@ class Menugeneral extends BaseController
         $subcategorias = new Subcategoria();
         $datos['subcategoria'] = $subcategorias->orderBy('ID_SUBCAT', 'ASC')->findAll();
         echo view('header');
-        echo view('prueba',$datos);
+        echo view('menugeneral',$datos);
         echo view('footer');
     }
 

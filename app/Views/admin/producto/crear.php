@@ -181,6 +181,11 @@
         border-left: inherit;
         padding: 12px;
     }
+
+    .content-file img {
+        max-width: 100%;
+        max-height: 416px;
+    }
 </STyle>
 <div class="col-md-4">
     <div class="card">
@@ -194,10 +199,10 @@
                 <div class="content-file">
                     <div class="input-file input-file-image">
                         <!-- USO EN LA IMAGEN CIRCULAR img-circle -->
-                    
-                        <img  name="foto" class="img-upload-preview" width="300" height="300" src="http://placehold.it/100x100" alt="muestra previa">
-                        <input  required name="foto"  type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
-                      </div>
+
+                        <img name="foto" class="img-upload-preview"  src="http://placehold.it/100x100" alt="Elegir imagen">
+                        <input required name="foto" type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
+                    </div>
                 </div>
             </div>
         </div>
