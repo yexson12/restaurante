@@ -8,7 +8,7 @@ CREATE TABLE `categoria` (
   `DES_CATEGORIA` varchar(100) NOT NULL,
   PRIMARY KEY (`ID_CATEGORIA`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+ALTER TABLE categoria AUTO_INCREMENT = 1;
 
 INSERT INTO `bd_restaurante`.`categoria` (`ID_CATEGORIA`, `NOMBRE_CATEGORIA`, `DES_CATEGORIA`) VALUES ('1', 'parrillas', 'todo tipo de parrillas');
 INSERT INTO `bd_restaurante`.`categoria` (`ID_CATEGORIA`, `NOMBRE_CATEGORIA`, `DES_CATEGORIA`) VALUES ('2', 'platos', 'platos tipicos');
@@ -25,6 +25,7 @@ CREATE TABLE `subcategoria` (
   CONSTRAINT `FK_subcategoria` FOREIGN KEY (`ID_CATEGORIA`) REFERENCES `categoria` (`ID_CATEGORIA`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+ALTER TABLE subcategoria AUTO_INCREMENT = 1;
 
 
 
@@ -63,7 +64,16 @@ CREATE TABLE `producto` (
   KEY `FK_producto_subcat` (`ID_SUBCAT`,`ID_CATEGORIA`),
   CONSTRAINT `FK_producto_cat` FOREIGN KEY (`ID_CATEGORIA`) REFERENCES `categoria` (`ID_CATEGORIA`),
   CONSTRAINT `FK_producto_subcat` FOREIGN KEY (`ID_SUBCAT`, `ID_CATEGORIA`) REFERENCES `subcategoria` (`ID_SUBCAT`, `ID_CATEGORIA`)
-) 
+) ;
+ALTER TABLE producto AUTO_INCREMENT = 1;
+
+INSERT INTO `bd_restaurante`.`producto` (`PRODUCTO_NOMBRE`, `descripcion`, `PRECIO_UNITARIO`, `STOCK`, `ID_CATEGORIA`, `ID_SUBCAT`, `foto`, `ESTADO`) VALUES ('pilsen', 'Pilsen de 600 mil', '6', '12', '3', '8', 'pilsen.jpg', '1');
+INSERT INTO `bd_restaurante`.`producto` (`PRODUCTO_NOMBRE`, `descripcion`, `PRECIO_UNITARIO`, `STOCK`, `ID_CATEGORIA`, `ID_SUBCAT`, `foto`, `ESTADO`) VALUES ('parrillada europea', 'parrilla de 5 piezas', '12', '12', '1', '15', 'parillaeuropea.jpg', '1');
+INSERT INTO `bd_restaurante`.`producto` (`PRODUCTO_NOMBRE`, `descripcion`, `PRECIO_UNITARIO`, `STOCK`, `ID_CATEGORIA`, `ID_SUBCAT`, `foto`, `ESTADO`) VALUES ('Lomo saltado', 'Lomo 1 porcion', '12', '12', '2', '1', 'lomo.jpg', '1');
+INSERT INTO `bd_restaurante`.`producto` (`PRODUCTO_NOMBRE`, `descripcion`, `PRECIO_UNITARIO`, `STOCK`, `ID_CATEGORIA`, `ID_SUBCAT`, `foto`, `ESTADO`) VALUES ('Mazamorra morada', 'Mazamorra porcion de 250ml', '2', '12', '4', '11', 'Mazamorra-morada.webp', '1');
+
+
+
 
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -73,7 +83,11 @@ CREATE TABLE `usuarios` (
   `contrasena` varchar(150) NOT NULL,
   `estado` int DEFAULT '1',
   PRIMARY KEY (`id`)
-)
+);
+
+ALTER TABLE usuarios AUTO_INCREMENT = 1;
+
+
 INSERT INTO `bd_restaurante`.`usuarios` (`nombre_completo`, `correo`, `usuario`, `contrasena`, `estado`) VALUES ('admin', 'admin@gmail.com', 'admin', '123', '1');
 
 
