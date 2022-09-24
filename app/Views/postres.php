@@ -17,7 +17,7 @@
 
 <div class="container CONTAINERHOLA">
 
-  <div class="panel-header" style="	background-image: linear-gradient(rgba(231, 197, 197, 0.507),rgba(61, 60, 60, 0.863)), url('<?= base_url() ?>/public/atlantis/assets/img/proyecto/como-prender-una-parrilla-1900Wx500H.jpg');
+  <div class="panel-header" style="	background-image: url('<?= base_url() ?>/public/atlantis/assets/img/categorias/postre.jpg');
                  background-repeat: no-repeat; background-position: 50% 50%;
                  background-size:cover; ">
     <div class="page-inner py-5">

@@ -188,11 +188,12 @@ $row= mysqli_fetch_array($resultnav)*/
                         #miBoton:hover {
                  
                             background: #1572E8;
-                            color: white;
+                            color: white; 
                         }
+                       
 
                         #miBoton:active {
-                            background: gray;
+                            background: #1572E8;
                             color: white;
                         }
                     </style>
@@ -221,13 +222,20 @@ $row= mysqli_fetch_array($resultnav)*/
 
 
                         </p>
-
+                
                         <?php foreach ($listaEmpleados as $empleado) { ?>
-                            <li  class="nav-item ">
-                                <a id="miBoton" href="<?= base_url() ?>/<?php echo $empleado['NOMBRE_CATEGORIA'];  ?>">
+                            <li active  class="nav-item ">
+                    
+                                <a id="miBoton"  href="<?= base_url() ?>/platogeneral/<?php echo $empleado['ID_CATEGORIA'];?>">
                                     <i class="fas fa-home"></i>
-                                    <p><?php echo $empleado['NOMBRE_CATEGORIA'];  ?></p>
-                                </a>
+                                    <p>
+                                    <input   type="hidden" class="" name="PRODUCTO_ID" value="<?php echo $empleado['ID_CATEGORIA'];  ?>">
+                                        <?php echo $empleado['NOMBRE_CATEGORIA'];  ?>
+                                    
+                                    
+                                    </p>
+                                </a> 
+                            
                             </li>
 
 

@@ -24,8 +24,9 @@ class Categorias extends Controller{
         }
 
         $categorias = new categoria();
-        $datos['categoria'] = $categorias->findAll();
+        $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'DESC')->findAll();
         echo view('admin/template/headadmin');
+        echo view('admin/categoria/head');
         echo view('admin/categoria/listar_cat', $datos);
         echo view('admin/template/footadmin');
     }
@@ -36,6 +37,7 @@ class Categorias extends Controller{
     {
        
      echo view('admin/template/headadmin');
+     echo view('admin/categoria/head');
         echo view('admin/categoria/crear_cat');
         echo view('admin/template/footadmin');
     }
@@ -76,6 +78,7 @@ class Categorias extends Controller{
         $datos['categoria'] = $categorias->where('ID_CATEGORIA', $id)->first();
             
         echo view('admin/template/headadmin');
+        echo view('admin/categoria/head');
         echo view('admin/categoria/editar_cat',$datos);
         echo view('admin/template/footadmin');
     }

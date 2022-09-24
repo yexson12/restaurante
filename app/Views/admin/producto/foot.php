@@ -9,8 +9,19 @@
 <!-- Vue JS -->
 <script src="<?= base_url('/public/assets/js/plugins/vue.global.js'); ?>"></script>
 <script src="<?= base_url('/public/assets/js/plugins/axios.min.js'); ?>"></script>
-
 <!-- jQuery UI -->
+
+
+
+
+
+<!-- USO EN LA IMAGEN -->
+
+<script src="<?= base_url() ?>/public/atlantis/assets/js/atlantis.min.js"></script>
+
+
+
+<!--fin yexson -->
     
 	
 	<script>
