@@ -4,7 +4,7 @@ class LocalOrdenAsignado {
         this.kodoti = new KodotiLocalCache('kodoti');
         this.NAME_LOCAL = 'ordenAsignado';
         if(!this.existLocalStorage()){
-            this.kodoti.add(this.NAME_LOCAL, []);
+            this.kodoti.add(this.NAME_LOCAL, [], { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
         }
     }
 
@@ -36,7 +36,7 @@ class LocalOrdenAsignado {
     }
 
     agregar(array){
-        this.kodoti.add(this.NAME_LOCAL, this.ordenAsignado.concat(array));
+        this.kodoti.add(this.NAME_LOCAL, this.ordenAsignado.concat(array), { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     agruparDataPorPersona(index_persona = 0){

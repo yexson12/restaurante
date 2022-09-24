@@ -1,7 +1,7 @@
 <?php
 $servidor = "mysql:dbname=bd_restaurante;host=localhost";
 $usuario = "root";
-$password = "1234";
+$password = "";
 
 try {
     $pdo = new PDO($servidor, $usuario, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -130,7 +130,7 @@ $row= mysqli_fetch_array($resultnav)*/
             <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
 
                 <div class="container-fluid">
-                    <div class="collapse" id="search-nav">
+                    <!-- <div class="collapse" id="search-nav">
                         <form class="navbar-left navbar-form nav-search mr-md-3">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -141,13 +141,13 @@ $row= mysqli_fetch_array($resultnav)*/
                                 <input type="text" placeholder="Search ..." class="form-control">
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                     <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-                        <li class="nav-item toggle-nav-search hidden-caret">
+                        <!-- <li class="nav-item toggle-nav-search hidden-caret">
                             <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
                                 <i class="fa fa-search"></i>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown hidden-caret">
                             <a class="nav-link" href="<?= base_url() ?>/dividir">
                                 <i class="fas fa-coins"></i>

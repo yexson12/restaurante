@@ -3,13 +3,17 @@ class LocalPersona {
     constructor(){
         this.kodoti = new KodotiLocalCache('kodoti');
         this.NAME_LOCAL = 'persona';
-        if(!this.existLocalStorage()){
-            this.kodoti.add(this.NAME_LOCAL, []);
-        }
+        this.agregar_local();
     }
 
     get personas(){
         return this.kodoti.get(this.NAME_LOCAL);
+    }
+
+    agregar_local() {
+        if(!this.existLocalStorage()){
+            this.kodoti.add(this.NAME_LOCAL, [], { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
+        }
     }
 
     get_by_index(index){
@@ -30,6 +34,7 @@ class LocalPersona {
     }
 
     agregar_persona(){
+        this.agregar_local();
         let personas = this.personas;
         const index = this.ultimo_index() + 1;
         personas.push(
@@ -41,7 +46,7 @@ class LocalPersona {
                 monto_personalizado: 0
             }
         );
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     //mitad de la cuenta
@@ -52,7 +57,7 @@ class LocalPersona {
             item.monto_personalizado = monto_personalizado;
             new_array.push(item);
         }
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     guardar_platos(index_persona, datos){
@@ -80,7 +85,7 @@ class LocalPersona {
         let platos_asignados = this.personas[indice_persona].items_asignado;
         platos_asignados.push(item);
         personas[indice_persona].items_asignado = platos_asignados;
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
     actualizar_plato(indice_persona, item){
         let personas = this.personas;
@@ -88,7 +93,7 @@ class LocalPersona {
         const indice_plato = platos_asignados.findIndex(elemento => elemento.index == item.index)
         platos_asignados[indice_plato].cantidad = parseInt(item.cantidad) + parseInt(platos_asignados[indice_plato].cantidad);
         personas[indice_persona].items_asignado = platos_asignados;
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
     actualizar_cantidad(index_persona, item){
         let personas = this.personas;
@@ -96,20 +101,54 @@ class LocalPersona {
         
         personas[indice_persona].items_asignado = item;
         
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
     borrar_plato(index_persona, index_plato){
         let personas = this.personas;
         let indice_persona = personas.findIndex((elemento) => elemento.index == index_persona);
         const new_data = personas[indice_persona].items_asignado.filter((item) => parseInt(item.index) != parseInt(index_plato));
         personas[indice_persona].items_asignado = new_data;
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
+    }
+    update_all_count_product(index_plato){
+        console.log('update_all_count_product')
+        let personas = local_persona.personas
+        const personas_process = personas.map((element) => {
+            element.items_asignado = element.items_asignado.map((element) => {
+                if ( element.index == index_plato ) {
+                    if ( element.cantidad > 1 ) {
+                        element.cantidad = parseInt(element.cantidad) - 1
+                    }
+                }
+                //element.cantidad = element.index == index_plato ? element.cantidad = parseInt(element.cantidad) - 1 : element.cantidad 
+                return element;
+            })
+            return element;
+        })
+        console.log(personas_process)
+        this.kodoti.add(this.NAME_LOCAL, personas_process, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
+    }
+    delete_all_product(index_plato){
+        let personas = local_persona.personas;
+        const personas_process = personas.map((element) => {
+            element.items_asignado = element.items_asignado.map((element) => {
+                return element.index != index_plato ? element : {}
+            })
+            const item_process = element.items_asignado.filter((element) => {
+                if(Object.entries(element).length != 0){
+                    return element;
+                }
+            });
+            element.items_asignado = item_process
+            return element;
+        })
+        this.kodoti.add(this.NAME_LOCAL, personas_process, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
     borrar_persona(index_persona){
         let personas = this.personas;
         const new_data = personas.filter((item) => parseInt(item.index) != parseInt(index_persona));
         personas = new_data;
-        this.kodoti.add(this.NAME_LOCAL, personas);
+        this.kodoti.add(this.NAME_LOCAL, personas, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     calcular_monto_por_plato(indice_persona){
@@ -121,6 +160,25 @@ class LocalPersona {
             monto = (parseInt(item.cantidad) * parseFloat(precio_unitario)) + monto;
         }
         return monto;
+    }
+
+    calcular_subtotal(){
+        let personas = local_persona.personas;
+        let orden = new LocalOrden();
+        let subtotal = 0;
+        personas.map((element) => {
+            element.items_asignado = element.items_asignado.map((element) => {
+                let precio_unitario = orden.get_by_index(element.index).precio_unitario
+                subtotal = subtotal + (precio_unitario * element.cantidad)
+            })
+        })
+        return subtotal;
+    }
+
+    calcular_total_faltante(){
+        let orden = new LocalOrden();
+        let faltante = parseFloat(orden.calcularCuentaTotal()) - parseFloat(this.calcular_subtotal());
+        return faltante;
     }
 
     agruparData2(){
@@ -193,6 +251,11 @@ class LocalPersona {
         }
 
         return parseInt(Math.max(...indexes));
+    }
+
+    delete_local () {
+        console.log('delete_local');
+        this.kodoti.add(this.NAME_LOCAL, [], { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
 }

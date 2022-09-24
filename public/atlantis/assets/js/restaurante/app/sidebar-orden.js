@@ -97,9 +97,16 @@ function getDetails(index_target){
 
 $('.qsb-details-btnminus').click(function(e){
     btn_spinner_action_qsb(this)
+    local_persona.update_all_count_product(index_item)
+    $('#list-platos-personas').empty();
+    cargar_dividir();
+    show_lista_personalizada()
+    
 });
 $('.qsb-details-btnplus').click(function(){
     btn_spinner_action_qsb(this)
+    show_lista_personalizada()
+    actualizar_total_indicadores();
 });
 
 function btn_spinner_action_qsb(btn){
@@ -147,21 +154,28 @@ function updateItemOrden(index_item){
     orden_item['cantidad'] = new_amount;
     orden_item['precio_total'] = orden_item['precio_unitario'] * new_amount;
     local_orden.actualizar(orden_item, ['cantidad', 'precio_total']);
-
-    let ordenAsignado_item = local_ordenAsignado.get_by_index(index_item);
-    ordenAsignado_item['cantidad_max'] = new_amount;
-    local_ordenAsignado.actualizar(ordenAsignado_item);
+    //console.log('updateItemOrden: ' + index_item);
+    // let ordenAsignado_item = local_ordenAsignado.get_by_index(index_item);
+    // ordenAsignado_item['cantidad_max'] = new_amount;
+    //local_ordenAsignado.actualizar(ordenAsignado_item);
 
     // const new_amount = $('#qsb-details-amount').val();
     // const data = {campo: ["cantidad", "precio_total"], valor: [new_amount, new_amount * ]};
     // local_orden.actualizar(index_item, data);
 }
 
-function deleteItemOrden(index){
-    local_orden.delete(index);
+function deleteItemOrden(index_producto){
+    
+    //console.log(personas_process);
+    
+    local_orden.delete(index_producto);
+    local_persona.delete_all_product(index_producto);
     //Page: Cuenta total
     $('#numbers-cuenta-total').empty();
     $('#numbers-cuenta-total').text(fSoles.format(local_orden.calcularCuentaTotal()));
+    $('#list-platos-personas').empty();
+    cargar_dividir()
+    // show_lista_personalizada();
 }
 
 function getIndexItemSelected(){

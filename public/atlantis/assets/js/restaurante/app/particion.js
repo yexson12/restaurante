@@ -6,7 +6,9 @@ function cargar_dividir(){
     mostrarCuentaTotal();
     mostrar_container_personas();
     show_lista_personas();
+    show_lista_personalizada();
     agregar_platos_asignados()
+    actualizar_total_indicadores();
 }
 
 function mostrarCuentaTotal(){
@@ -59,6 +61,7 @@ function añadir_personas(cantidad){
 }
 
 function show_lista_personalizada(){
+    console.log('show_lista_personazada')
     const personas = local_persona.personas;
     const monto_total = local_orden.calcularCuentaTotal();
     const mitad = parseFloat(monto_total) / parseInt(personas.length);
@@ -81,6 +84,7 @@ function show_lista_personas(){
             $('#btn-editar-' + item.index).show()
         }
     }
+    actualizar_total_indicadores()
 }
 
 function agregar_platos_asignados(index_persona = 0){
@@ -147,6 +151,11 @@ function modal_editar(index_persona){
     vizualizacion_modal('modal-editar', true);
 }
 
+function actualizar_total_indicadores(){
+    $('#lbl-faltante').text(fSoles.format(local_persona.calcular_total_faltante()));
+    $('#lbl-subtotal').text(fSoles.format(local_persona.calcular_subtotal()));
+}
+
 $('#list-platos-personas').on('click', async function(e){
     if($(e.target).attr('data-accion') == undefined){
         return;
@@ -208,6 +217,7 @@ $('#btn-modal-agregar').click(function(){
 
     vizualizacion_modal('modal-agregar', false);
     agregar_platos_asignados(index_persona);
+    actualizar_total_indicadores()
     show_alert('success', 'Asignado'); 
     //Agregar los items en persona
 });
@@ -225,6 +235,7 @@ $('#btn-modal-editar').click(function(){
     local_persona.actualizar_cantidad(index_persona, update_data);
     vizualizacion_modal('modal-editar', false);
     agregar_platos_asignados(index_persona);
+    actualizar_total_indicadores()
     show_alert('success', 'Actualizado'); 
 });
 
@@ -240,8 +251,6 @@ $('#btn-asignados').click(function(){
         $('#mdl-asignados-container').append(item_modalAsignados(item.index, nombre, categoria, cantidad));
     }
 
-    let datas_personas = []
-
     for (let item of datos_agrupados){
         for (let item2 of personas) {
             for (let item3 of item2.items_asignado){
@@ -251,25 +260,14 @@ $('#btn-asignados').click(function(){
             }
         }
     }
-    
-
-    // for (let item of datos_agrupados){
-    //     console.log("item:----");
-    //     console.log(item);
-    //     console.log("----");
-    //     for (let item2 of personas) {
-    //         let data = item2.items_asignado.find((element) => element.index == item.index);
-    //         console.log(data);
-    //         // if (item2.index == data.index) {
-    //         //     datas_personas.push({id_persona: item2.index, cantidad: data.cantidad});
-    //         // }
-    //     }
-    // }
-
-    console.log(datas_personas);
-
     vizualizacion_modal('modal-asignados', true);
 });
+
+$('#btn-limpiar').click(function(){
+    local_persona.delete_local();
+    $('#list-platos-personas').empty()
+    cargar_dividir();
+})
 
 function item_lista1_persona(index, nombre, monto){
     return `
@@ -441,6 +439,7 @@ function event_mdl_editar_borrar(){
             local_persona.borrar_plato(index_persona, index_plato);
             vizualizacion_modal('modal-editar', false);
             agregar_platos_asignados(index_persona);
+            actualizar_total_indicadores();
         } else {
             return;
         }

@@ -63,13 +63,27 @@
             <div id="container-personas" class="tab-content mt-2 mb-3 col-12" id="pills-tabContent">
                 <div class="tab-pane fade show active tab-platos" id="pills-platos" role="tabpanel"
                      aria-labelledby="pills-home-tab">
-                    <button id="btn-asignados" class="btn btn-secondary btn-round mb-3 pt-1 pb-1">
-                                    <span class="btn-label">
-                                        <i class="far fa-eye"></i>
-                                    </span>
-                        &nbsp;
-                        Asignados
-                    </button>
+                    
+                    <div class="d-flex justify-content-between"> 
+                        <button id="btn-asignados" class="btn btn-secondary btn-round mb-3 pt-1 pb-1">
+                            <span class="btn-label">
+                                <i class="far fa-eye"></i>
+                            </span>
+                            &nbsp;
+                            Asignados
+                        </button>
+                        <button id="btn-limpiar" class="btn btn-secondary btn-border btn-round mb-3 pt-1 pb-1">
+                            <span class="btn-label">
+                                <i class="fas fa-broom"></i>
+                            </span>
+                            &nbsp;
+                            Limpiar
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between pl-2 pr-2 pb-2">
+                        <span class="text-muted">Faltan: <b id="lbl-faltante"></b></span>
+                        <span class="text-muted">Subtotal: <b id="lbl-subtotal"></b></span>
+                    </div>
                     <div id="list-platos-personas" class="accordion accordion-secondary">
 
                     </div>
@@ -77,52 +91,6 @@
 
                 <div class="tab-pane fade" id="pills-personalizado" role="tabpanel">
                     <div id="list-personalizado-personas" class="accordion accordion-secondary">
-
-                        <div class="card lista-item-personas mb-2"
-                            style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 2
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/.
-                                        100,00</b></div>
-                            </div>
-                        </div>
-                        <div class="card lista-item-personas mb-2"
-                            style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 3
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/.
-                                        100,00</b></div>
-                            </div>
-                        </div>
-                        <div class="card lista-item-personas mb-2"
-                            style="background: white !important; border-radius: 5px !important;">
-                            <div class="card-header collapsed d-flex" role="button">
-                                <div class="d-flex align-items-center">
-                                    <div class="span-icon">
-                                        <div class="icon-user"></div>
-                                    </div>
-                                    <div class="span-title">
-                                        Persona 4
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row-reverse flex-grow-1"><b class="text-success">S/.
-                                        100,00</b></div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 

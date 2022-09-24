@@ -4,7 +4,7 @@ class LocalOrden {
         this.kodoti = new KodotiLocalCache('kodoti');
         this.NAME_LOCAL = 'orden';
         if(!this.existLocalStorage()){
-            this.kodoti.add(this.NAME_LOCAL, []);
+            this.kodoti.add(this.NAME_LOCAL, [], { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
         }
     }
 
@@ -30,14 +30,14 @@ class LocalOrden {
         if (orden_by_index.length == 0 ){
             console.log('nuevo')
             orden.push(array);
-            this.kodoti.add(this.NAME_LOCAL, orden);
+            this.kodoti.add(this.NAME_LOCAL, orden, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
         } else {
             console.log('actualizd')
             orden_by_index.cantidad = parseInt(orden_by_index.cantidad) + parseInt(array.cantidad);
             orden_by_index.precio_total = parseFloat(orden_by_index.precio_unitario) * parseInt(orden_by_index.cantidad);
             let indice_item = orden.findIndex((elemento) => elemento.index == array.index);
             orden[indice_item] = orden_by_index;
-            this.kodoti.add(this.NAME_LOCAL, orden);
+            this.kodoti.add(this.NAME_LOCAL, orden, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
         }
     }
 
@@ -50,7 +50,7 @@ class LocalOrden {
             }
         }
         this.kodoti.delete(this.NAME_LOCAL);
-        this.kodoti.add(this.NAME_LOCAL, orden);
+        this.kodoti.add(this.NAME_LOCAL, orden, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     // actualizar(index, data){
@@ -77,7 +77,7 @@ class LocalOrden {
             }
         }
         this.kodoti.delete(this.NAME_LOCAL);
-        this.kodoti.add(this.NAME_LOCAL, orden);
+        this.kodoti.add(this.NAME_LOCAL, orden, { type: KodotiLocalCache.TIMETYPE.HOURS, value: 24 });
     }
 
     calcularCuentaTotal(){
