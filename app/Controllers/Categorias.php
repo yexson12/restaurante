@@ -24,7 +24,7 @@ class Categorias extends Controller{
         }
 
         $categorias = new categoria();
-        $datos['categoria'] = $categorias->findAll();
+        $datos['categoria'] = $categorias->orderBy('ID_CATEGORIA', 'DESC')->findAll();
         echo view('admin/template/headadmin');
         echo view('admin/categoria/head');
         echo view('admin/categoria/listar_cat', $datos);

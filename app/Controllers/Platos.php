@@ -20,7 +20,7 @@ class Platos extends BaseController
 
     public function platogeneral($id = null)
     {      $bedida = new Bebida();
-        $datos['producto'] = $bedida->where("ID_CATEGORIA",$id)->where( "ESTADO",1)->orderBy('PRODUCTO_ID', 'ASC')->findAll();
+        $datos['producto'] = $bedida->where("ID_CATEGORIA",$id)->where( "ESTADO",1)->orderBy('PRODUCTO_ID', 'DESC')->findAll();
         $categoria = new categoria();
 
         $datos['categoria'] = $categoria->where('ID_CATEGORIA', $id)->first();
