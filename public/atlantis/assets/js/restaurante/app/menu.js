@@ -12,4 +12,5 @@ $('.btn-agregar-producto-orden').click(function (){
          cargarQuickSideBar();
       }
    });
+   show_alert('success','Agregado')
 });
