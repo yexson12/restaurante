@@ -26,7 +26,7 @@ if(!isset($_SESSION['usuario'])){
 
     public function ingresar()
     {   session_start();
-        $conexion = mysqli_connect("localhost","root","","bd_restaurante");
+        $conexion = mysqli_connect("localhost","root","1234","bd_restaurante");
 
         $correo = $_POST['correo'];
         $contrasena = $_POST['contrasena'];

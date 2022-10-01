@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Ingrese la cantidad de personas</label>
+                            <label for="exampleFormControlSelect1">Agregar personas</label>
                             <div class="input-group d-flex align-items-center">
                                 <input type="number" class="form-control" id="txt-personas" placeholder="0...">
                                 <button id="btn-agregar-personas" type="button" class="btn btn-icon btn-round btn-secondary btn-sm ml-2">

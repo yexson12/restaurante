@@ -41,7 +41,7 @@
                     <div class="container-fluid">
                         <div class="row-md-4">
                             <div class="card card-post card-round">
-                                <img class="card-img-top" src="<?= base_url() ?>/public/atlantis/assets/img/proyecto/chadengle.jpg"
+                                <img class="card-img-top" src="<?= base_url() ?>/public/uploads/lomo.jpg"
                                      alt="Card image cap">
                                 <div class="card-body">
                                     <div>
