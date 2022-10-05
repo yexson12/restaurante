@@ -27,9 +27,9 @@ $row= mysqli_fetch_array($resultnav)*/
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>El Parrillero</title>
+    <title>Celestina</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="<?= base_url() ?>/public/atlantis/assets/img/icon.ico" type="image/x-icon" />
+    <link rel="icon" href="<?= base_url() ?>/public/uploads/c1.ico" type="image/x-icon" />
 
     <!-- Fonts and icons -->
     <script src="<?= base_url() ?>/public/atlantis/assets/js/plugin/webfont/webfont.min.js"></script>
@@ -109,8 +109,9 @@ $row= mysqli_fetch_array($resultnav)*/
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="blue">
 
-                <a href="index.html" class="logo">
-                    <img src="<?= base_url() ?>/public/atlantis/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+                <a href="<?= base_url() ?>/menugeneral" class="logo">
+                     <!-- Logo Header -->
+                    <img src="<?= base_url() ?>/public/uploads/d3.png" alt="navbar brand" class="navbar-brand">
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
