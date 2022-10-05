@@ -146,11 +146,7 @@
 
       </div>
 
-      <div class="btn-box">
-        <a href="">
-          View More
-        </a>
-      </div>
+      
     </div>
     <!-- prueba-->
 
