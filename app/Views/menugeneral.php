@@ -1,18 +1,5 @@
 <STyle>
-  .CONTAINERHOLA {
-    border: 2px red solid;
 
-  }
-
-  .panel-header {
-    border: 2px greenyellow solid;
-
-  }
-
-  .page-inner {
-    border: 2px greenyellow solid;
-
-  }
 </STyle>
 
 <div class="container CONTAINERHOLA">
