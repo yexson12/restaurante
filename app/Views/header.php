@@ -210,7 +210,7 @@ $row= mysqli_fetch_array($resultnav)*/
                         <div class="info d-flex justify-content-center align-items-center">
 
                             <a href="<?= base_url() ?>/menugeneral">
-                                <span class="h2 text-center text-muted m-0"><b>~MENU~</b>
+                                <span class="h2 text-center text-muted m-0"><b>~MENUSSSS~</b>
                                 </span>
                             </a>
                             <div class="clearfix"></div>
