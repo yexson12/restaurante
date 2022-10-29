@@ -50,7 +50,7 @@
                     <li class="nav-item flex-grow-1">
                         <a class="nav-link text-center pl-0 pr-0" id="pills-personalizado-tab" data-toggle="pill"
                            href="#pills-personalizado" role="tab" aria-controls="pills-personalizado"
-                           aria-selected="false">Personalizado</a>
+                           aria-selected="false">Partes Iguales</a>
                     </li>
                 </ul>
             </div>
