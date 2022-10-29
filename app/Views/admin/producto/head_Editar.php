@@ -37,6 +37,7 @@
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
+                       <!-- Fonts and icons 
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#store" class="nav-link" aria-expanded="false">
                             <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
@@ -52,7 +53,8 @@
 
                             </ul>
                         </div>
-                    </li>
+                    </li> 
+                -->
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#buy" class="nav-link" aria-expanded="false">
                             <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
@@ -94,15 +96,15 @@
             </div>
             <div class="sidenav-footer mx-3 ">
                 <div class="card card-plain shadow-none" id="sidenavCard">
-                    <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/illustrations/icon-documentation.svg'); ?>">
+                    <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/icon/icon.png'); ?>">
                     <div class="card-body text-center p-3 w-100 pt-0">
                         <div class="docs-info">
-                            <h6 class="mb-0">Argon Dashboard</h6>
-                            <p class="text-xs font-weight-bold mb-0">Bootstrap 5 Admin Template</p>
+                            <h6 class="mb-0">CELESTINA</h6>
+                            <p class="text-xs font-weight-bold mb-0">Comidas para tu palagar</p>
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-dark btn-sm mb-0 w-100" href="https://www.creative-tim.com/product/argon-dashboard">Ver template</a>
+                <a class="btn btn-dark btn-sm mb-0 w-100" href="">Ver Menú</a>
             </div>
         </div>
     </aside>

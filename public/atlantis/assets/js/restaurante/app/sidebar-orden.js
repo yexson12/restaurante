@@ -78,6 +78,7 @@ function printDetails(index_target){
     clearDetails();
     $('#qsb-details-name').text(item_orden['nombre']);
     $('#qsb-details-description').text(item_orden['descripcion']);
+    $('#qsb-details-foto').attr("src","http://localhost/restaurante/public/uploads/"+ (item_orden['foto']));
     $('#qsb-details-amount').val(item_orden['cantidad']);
     $('#qsb-details-unit').text(fSoles.format(parseFloat(item_orden['precio_unitario'])));
     $('#qsb-details-total').text(fSoles.format(parseFloat(item_orden['precio_total'])));

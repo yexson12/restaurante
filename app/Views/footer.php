@@ -41,8 +41,8 @@
                     <div class="container-fluid">
                         <div class="row-md-4">
                             <div class="card card-post card-round">
-                                <!--<img class="card-img-top" src="<?= base_url() ?>/public/uploads/lomo.jpg"
-                                     alt="Card image cap">-->
+                                <img id="qsb-details-foto" class="card-img-top"
+                                     alt="Card image cap">
                                 <div class="card-body">
                                     <div>
                                         <p id="qsb-details-description" class="card-text mb-0">

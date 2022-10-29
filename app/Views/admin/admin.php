@@ -4,10 +4,10 @@
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white">Menu</a></li>
-                    <li class="breadcrumb-item text-sm text-white active" aria-current="page">menu</li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white">Dashboard</a></li>
+                    <li class="breadcrumb-item text-sm text-white active" aria-current="page">Futura</li>
                 </ol>
-                <h6 class="font-weight-bolder text-white mb-0">Menu</h6>
+                <h6 class="font-weight-bolder text-white mb-0">Actualizacion</h6>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4">
                 <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -23,7 +23,7 @@
                             <img src="<?= base_url('/public/assets/img/icon/icon.png'); ?>" class="profile-img rounded-circle img-fluid border border-2 border-white">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item border-radius-md" href="<?= base_url('perfil'); ?>"><i class="fa-solid fa-user me-1"></i> Ver perfil</a></li>
+                  
                             <li><a class="dropdown-item border-radius-md" href="<?= base_url('cerrarsesion'); ?>"><i class="fa-solid fa-user me-1"></i> Cerrar Sesion</a></li>
 
                         </ul>
@@ -143,9 +143,9 @@
                             <h6 class="text">Resumen de ventas</h6>
                             <dvi class="ms-auto">
                                 <div class="dropdown">
-                                    <button class="btn bg-gradient-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">{{ year }}</button>
+                                    <button class="btn bg-gradient-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                        <li v-for="item in years"><a class="dropdown-item" @click="year = item.year, graphChart()">{{ item.year }}</a></li>
+                                        <li v-for="item in years"><a class="dropdown-item" @click="year = item.year, graphChart()"></a></li>
                                     </ul>
                                 </div>
                             </dvi>
@@ -175,9 +175,9 @@
                                 <div v-for="(item, index) in salesweekamounts" class="d-flex px-2 py-2 pt-1">
                                     <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center"><i class="fa-solid fa-calendar text-white opacity-10"></i></div>
                                     <div class="d-flex flex-column justify-content-center">
-                                        <h6 class="mb-0 text-sm">{{ salesweeknames[index] }}</h6>
+                                        <h6 class="mb-0 text-sm"></h6>
                                     </div>
-                                    <div class="ms-auto"><span class="text-xs font-weight-bold"><i class="fa-solid fa-dollar-sign"></i>{{ item.toFixed(2) }}</span></div>
+                                    <div class="ms-auto"><span class="text-xs font-weight-bold"><i class="fa-solid fa-dollar-sign"></i></span></div>
                                 </div>
                             </div>
                         </div>

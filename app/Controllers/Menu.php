@@ -46,6 +46,7 @@ class Menu extends BaseController
             "descripcion" => $producto["descripcion"],
             "cantidad" => 1,
             "precio_unitario" => $producto["PRECIO_UNITARIO"],
+            "foto" => $producto["foto"],
             "precio_total" => $producto["PRECIO_UNITARIO"]
         ];
 

@@ -36,22 +36,8 @@
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a data-bs-toggle="collapse" href="#store" class="nav-link" aria-expanded="false">
-                            <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                                <i class="fa-solid fa-box text-dark text-sm"></i>
-                            </div>
-                            <span class="nav-link-text ms-2">Almacen</span>
-                        </a>
-                        <div class="collapse" id="store">
-                            <ul class="nav ms-4">
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('admin_cat'); ?>"><span class="sidenav-normal">Categorias</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('admin_pro'); ?>"><span class="sidenav-normal">Productos</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?= base_url('admin_subcat'); ?>"><span class="sidenav-normal">Sub Categorias</span></a></li>
-                            
-                            </ul>
-                        </div>
-                    </li>
+                
+                  
                     <li class="nav-item">
                     
                     <a class="nav-link" href="<?= base_url('admin_pro'); ?>">
@@ -79,14 +65,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a style="background: #EF9F9F ;" class="nav-link" href="<?= base_url('/'); ?>">
-                            <div  class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                <i class="fas fa-angle-double-left text-dark text-sm opacity-10"></i>
-                            </div>
-                            <span class="nav-link-text">Regresar Menu</span>
-                        </a>
-                    </li>
+              
                 </ul>
             </div>
             <div class="sidenav-footer mx-3 ">
@@ -94,12 +73,12 @@
                     <img class="w-50 mx-auto" src="<?= base_url('/public/assets/img/icon/icon.png'); ?>">
                     <div class="card-body text-center p-3 w-100 pt-0">
                         <div class="docs-info">
-                            <h6 class="mb-0">NEW START</h6>
-                            <p class="text-xs font-weight-bold mb-0">Jovenes programadores</p>
+                            <h6 class="mb-0">CELESTINA</h6>
+                            <p class="text-xs font-weight-bold mb-0">Comidas para tu palagar</p>
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-dark btn-sm mb-0 w-100" href="">Ver template</a>
+                <a class="btn btn-dark btn-sm mb-0 w-100" href="<?= base_url('/'); ?>">Ver Menú</a>
             </div>
         </div>
     </aside>
