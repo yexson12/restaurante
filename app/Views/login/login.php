@@ -102,7 +102,7 @@
             <form action="php/registro.php" method="POST" class="formulario__register">
                 <h2>Somos</h2>
                 <h2>NEW STAR</h2>
-                <p>Un grupo de jovenes sufriendo con su tesis</p>
+                <p>Para saber su contraseña llamar a 926520393</p>
 
             </form>
         </div>

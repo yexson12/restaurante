@@ -23,6 +23,8 @@ $('#btn-agregar-personas').click(function(){
         añadir_personas(cantidad_personas)
     });
     mostrar_container_personas();
+    $('#txt-personas').val('');
+ 
 });
 
 function mostrar_container_personas(){

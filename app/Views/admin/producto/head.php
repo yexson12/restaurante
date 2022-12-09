@@ -23,7 +23,7 @@
                             <img src="<?= base_url('/public/assets/img/icon/icon.png'); ?>" class="profile-img rounded-circle img-fluid border border-2 border-white">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item border-radius-md" href="<?= base_url('perfil'); ?>"><i class="fa-solid fa-user me-1"></i> Ver perfil</a></li>
+         
                             <li><a class="dropdown-item border-radius-md" href="<?= base_url('cerrarsesion'); ?>"><i class="fa-solid fa-user me-1"></i> Cerrar Sesion</a></li>
 
                         </ul>
